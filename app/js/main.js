@@ -1,8 +1,8 @@
 'use strict';
 import * as $ from 'jquery';
-import './slick.min';
 import './jquery.validate.min.js';
 import './jquery.inputmask.min';
+import './slick.min';
 
 window.addEventListener('load', function () {
 
@@ -156,6 +156,21 @@ window.addEventListener('load', function () {
                 header.classList.remove("active");
             }
         }
+    })();
+
+    (function accountSlider() {
+        if (!document.querySelector('.account')) {
+            return;
+        }
+
+        $('.account__main_round-slider').slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            prevArrow: '<div class="slick-prev"><span></span></div>',
+            nextArrow: '<div class="slick-next"><span></span></div>',
+            autoplay: false,
+        });
     })();
 
 });
