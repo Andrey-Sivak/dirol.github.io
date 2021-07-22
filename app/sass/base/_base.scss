@@ -14,5 +14,28 @@ body {
   }
 }
 
+.btn {
+  padding: 10px 0 5px;
+  background: linear-gradient(180deg, #00E245 0%, rgba(0, 226, 69, 0.3) 100%);
+  box-shadow: 0px 0px 20px #37E050;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-family: Body-Grotesque;
+  font-weight: 800;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+  display: block;
+  font-size: 20px;
+}
+
+.page-caption {
+  font-family: Body-Grotesque;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 50px;
+}
 
 

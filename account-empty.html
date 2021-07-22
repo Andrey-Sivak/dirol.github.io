@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="./dist/css/main.css">
   <title>Document</title>
 </head>
-<body>
+<body class="account">
 
 <header>
   <div class="header">
@@ -21,7 +21,7 @@
           <img src="./dist/img/logo-5.png" class="header-logo-2" />
         </div>
         <nav class="header-nav">
-          <div class="header-nav-item active">
+          <div class="header-nav-item">
             <a href="#">Главная</a>
           </div>
           <div class="header-nav-item">
@@ -41,11 +41,11 @@
           </div>
           <div class="main-banner-btn-container">
             <div class="main-banner-btn_wrap">
-              <div class="btn main-banner-btn">Зарегистрировать чек</div>
+              <div class="main-banner-btn">Зарегистрировать чек</div>
             </div>
           </div>
         </nav>
-        <a href="#" class="header-sign-in pop-op" data-popup="sign-up">
+        <a href="#" class="header-sign-in pop-op active" data-popup="sign-up">
           <img src="./dist/img/human-icon.png" alt="img" />
           <span>Личный кабинет</span>
         </a>
@@ -53,140 +53,45 @@
     </div>
   </div>
 </header>
-<section class="first-section">
 
-  <div class="main-banner-blur">
-    <img src="./dist/img/main-blur.png" alt="img" />
-  </div>
-  <div class="main-banner-bg-img-2">
-    <img src="./dist/img/main-banner-bg-img-2.png" alt="img" />
-  </div>
-
-  <div class="main-banner container">
-    <div class="main-banner-top">
-      <div class="main-banner-top-words">
-        <div class="main-banner-word-1">
-          <img
-                  class="mob"
-                  src="./dist/img/main-banner-img-1.png"
-                  alt="img"
-          />
-        </div>
-        <div class="main-banner-word-2">
-          <img src="./dist/img/main-banner-img-2.png" alt="img" class="" />
-        </div>
-      </div>
-      <img src="./dist/img/main-banner-img-1-mob.png" alt="img" class="main-banner-top-words-mob">
-    </div>
-    <div class="main-banner-bg-img">
-      <img src="./dist/img/main-banner-bg-img.png" alt="img" />
-      <img src="./dist/img/main-banner-bg-img-mob.png" class="mob" alt="img" />
-    </div>
-    <div class="main-banner-inner">
-      <div class="main-banner-bottom">
-        <div class="main-banner-bottom-item">
-          <div class="main-banner-bottom-item-help">
-            <img src="./dist/img/main-banner-bottom-img-1.png"
-                 alt="img"
-                 class="main-banner-bottom-item-img"/>
-          </div>
-          <div class="main-banner-bottom-item-content">
-            <div class="main-banner-bottom-item-green">Купите</div>
-            <div class="main-banner-bottom-item-text">
-              любые<br />2 пачки<br />Dirol
-            </div>
-          </div>
-        </div>
-        <div class="main-banner-bottom-item">
-          <div class="main-banner-bottom-item-help">
-            <img src="./dist/img/main-banner-bottom-img-2.png"
-                 alt="img"
-                 class="main-banner-bottom-item-img"/>
-          </div>
-          <div class="main-banner-bottom-item-content">
-            <div class="main-banner-bottom-item-green">Регистрируйте</div>
-            <div class="main-banner-bottom-item-text">
-              чек на сайте<br />x5.diroldontdrop.ru<br /><span
-            >с 1 августа по 30 сентября<br />2021 г.</span
-            >
-            </div>
-          </div>
-        </div>
-        <div class="main-banner-bottom-item">
-          <div class="main-banner-bottom-item-help">
-            <img src="./dist/img/main-banner-bottom-img-3.png"
-                    alt="img"
-                    class="main-banner-bottom-item-img"/>
-            <img src="./dist/img/main-banner-bottom-img-3-mob.png"
-                    alt="img"
-                    class="main-banner-bottom-item-img mob"/>
-          </div>
-          <div class="main-banner-bottom-item-content">
-            <div class="main-banner-bottom-item-green">Выигрывайте</div>
-            <div class="main-banner-bottom-item-text">
-              <div class="main-banner-bottom-item-text-li">
-                баллы на<br />Выручай-карту
-              </div>
-              <div class="main-banner-bottom-item-text-li">
-                модный мерч от Dirol
-              </div>
-              <div class="main-banner-bottom-item-text-li green">
-                Эксклюзивные<br />кроссовки<br />из переработанной<br />жвачки
-              </div>
-            </div>
-          </div>
-        </div>
+<main class="account-wrap">
+  <section class="account__header container">
+    <div class="account__add-card-wrap">
+      <div class="account__add-card">
+        <p class="account__add-card_text">Добавить<br>«Выручай-карту»</p>
+        <a href="#" class="account__add-card_link"></a>
       </div>
     </div>
-    <div class="main-banner-btn-container page">
-      <div class="main-banner-btn_wrap">
-        <div class="btn main-banner-btn">Зарегистрировать чек</div>
-      </div>
+    <div class="account__caption">
+      <h1 class="page-caption">личный кабинет</h1>
+      <a href="#" class="account__caption_logout">Выйти</a>
     </div>
-  </div>
-</section>
-<section>
-  <div class="main-prizes">
+    <div class="account__info">
+      <p class="account__info_fio">Константин Константинович
+        <br>Христарождественский</p>
+      <p class="account__info_text email">kKonstantin@gmail.com</p>
+      <p class="account__info_text phone">+7 999 000 0000</p>
+    </div>
+  </section>
+  <section class="account__main">
     <div class="container">
-      <div class="main-prizes-inner">
-        <div class="main-prizes-title">Призы</div>
-        <div class="main-prizes-items">
-          <div class="main-prizes-item">
-            <div class="main-prizes-item-title">Ежедневные<span> призы</span></div>
-            <div class="main-prizes-item-img">
-              <img src="./dist/img/main-items-img-1.png" alt="img" />
-            </div>
-            <div class="main-prizes-item-text">
-              <span>1000, 5000, 10000 баллов</span><br />на "Выручай-карту"
-            </div>
-          </div>
-          <div class="main-prizes-item">
-            <div class="main-prizes-item-title">Еженедельные<span> призы</span></div>
-            <div class="main-prizes-item-img">
-              <img src="./dist/img/main-items-img-2.png" alt="img" />
-            </div>
-            <div class="main-prizes-item-text">
-              Модный мерч<br />
-              <span>от Dirol x Maggi</span>
-              <a href="https://www.instagram.com/maggigad/?hl=ru">@maggigad</a>
-            </div>
-          </div>
-          <div class="main-prizes-item">
-            <div class="main-prizes-item-title">Ежемесячные<span> призы</span></div>
-            <div class="main-prizes-item-img">
-              <img src="./dist/img/main-items-img-3.png" alt="img" />
-            </div>
-            <div class="main-prizes-item-text">
-              Эксклюзивные кроссовки<br />из переработанной жвачки<br /><span
-            >от Dirol x Shane Gonzales</span> <a href="https://www.instagram.com/shaneaveli/">@shaneaveli</a> <span>x Maggi</span>
-              <a href="https://www.instagram.com/maggigad/?hl=ru">@maggigad</a>
-            </div>
-          </div>
+      <div class="account__main_round">
+        <p class="account__main_round-caption">МОИ ЧЕКИ</p>
+        <div class="account__main_round-content">
+          <p class="account__main_round-text">Вы еще не зарегистрировали <br>ни одного чека.</p>
+          <a href="#" class="btn account__main_round-btn">ЗАРЕГИСТРИРОВАТЬ ЧЕК</a>
+        </div>
+      </div>
+      <div class="account__main_round">
+        <p class="account__main_round-caption">МОИ ПРИЗЫ</p>
+        <div class="account__main_round-content">
+          <p class="account__main_round-text">Вы еще не получили ни <br>одного приза. Скорее <br>регистрируйте чеки!</p>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</main>
+
 <footer>
   <div class="footer">
     <div class="footer_wrap">

@@ -123,6 +123,31 @@
     color: #fff;
     margin-left: 94px;
     cursor: pointer;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      content: none;
+      width: 45px;
+      height: 16px;
+      background-image: url('../../img/menu-active.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      @include response-to(medium) {
+        content: none;
+      }
+    }
+
+    &.active {
+
+      &:before {
+        content: '';
+      }
+    }
 
     @include response-to(medium) {
       margin-left: 0;

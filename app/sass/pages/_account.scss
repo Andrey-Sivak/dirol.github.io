@@ -1,0 +1,216 @@
+.account {
+  color: #fff;
+  padding-top: 96px;
+  position: relative;
+  background-image: url('../../img/acc-shine-right-top-.png'),
+                    url("../../img/acc-shine-right-bottom.png"),
+                    url("../../img/acc-shine-left.png");
+  background-repeat: no-repeat;
+  background-size: initial;
+  background-position: right top, right bottom, left top;
+
+  &-wrap {
+    position: relative;
+
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 62px;
+  }
+
+  &__add-card {
+    margin-top: 35px;
+    position: relative;
+    padding: 10px 10px 5px 20px;
+    border: 1px solid #37E050;
+    border-radius: 20px;
+    filter: drop-shadow(0px 0px 4px #37E050);
+    width: fit-content;
+
+    &-wrap {
+      width: 30%;
+    }
+
+    &:before {
+      position: absolute;
+      content: '';
+      width: 55px;
+      height: 39px;
+      background-image: url('../../img/card-1.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      z-index: 10;
+      top: -16px;
+      right: -8px;
+    }
+
+    &_text {
+      letter-spacing: -0.02em;
+      font-size: 14px;
+      line-height: 18px;
+    }
+    
+    &_link {
+      position: absolute;
+      display: block;
+      cursor: pointer;
+      z-index: 12;
+      box-shadow: 0px 0px 20px #37E050;
+      background-color: $green-color;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%) translateX(-50%);
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 2px;
+        z-index: 13;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        height: 10px;
+        width: 2px;
+        z-index: 13;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+      }
+    }
+  }
+
+  &__info {
+    width: 30%;
+    text-align: right;
+    margin-top: 15px;
+
+    &_fio {
+      margin-bottom: 15px;
+      letter-spacing: -0.02em;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    &_text {
+      font-size: 12px;
+      margin-bottom: 4px;
+      position: relative;
+      width: fit-content;
+      margin-left: auto;
+
+      &:before {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        content: '';
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left center;
+        width: 12px;
+        height: 12px;
+      }
+
+      &.email {
+
+        &:before {
+          background-image: url('../../img/email-icon.png');
+          left: -21px;
+        }
+      }
+
+      &.phone {
+
+        &:before {
+          background-image: url('../../img/phone-icon.png');
+          left: -17px;
+        }
+      }
+    }
+  }
+
+  &__caption {
+    margin-left: -50px;
+
+    &_logout {
+      font-size: 12px;
+      line-height: 15px;
+      text-align: center;
+      text-decoration-line: underline;
+      display: block;
+      margin: 0 auto;
+      color: #fff;
+      opacity: .7;
+      cursor: pointer;
+    }
+  }
+
+  &__main {
+    background-image: url('../../img/main-prizes-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+
+    & .container {
+      max-width: 1095px;
+      display: flex;
+    }
+
+    &_round {
+      border-radius: 50%;
+      background: linear-gradient(203.83deg, #00E245 6.9%, rgba(0, 226, 69, 0.05) 85.64%);
+      min-width: 570px;
+      height: 584px;
+      position: relative;
+      @include flex-center();
+
+      &:first-of-type {
+        margin-right: -37px;
+      }
+
+      &:last-of-type {
+        margin-left: -37px;
+      }
+
+      &-caption {
+        position: absolute;
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 30px;
+        text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+        font-family: Body-Grotesque;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 50px;
+      }
+
+      &-text {
+        text-align: center;
+        letter-spacing: -0.02em;
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: bold;
+      }
+
+      &-btn {
+        width: 237px;
+        margin-top: 13px;
+      }
+    }
+  }
+
+  .footer {
+    background-image: none;
+  }
+}

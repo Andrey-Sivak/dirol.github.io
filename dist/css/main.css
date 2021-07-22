@@ -71,6 +71,29 @@ body {
       padding-left: 15px;
       padding-right: 15px; } }
 
+.btn {
+  padding: 10px 0 5px;
+  background: -webkit-linear-gradient(top, #00E245 0%, rgba(0, 226, 69, 0.3) 100%);
+  background: linear-gradient(180deg, #00E245 0%, rgba(0, 226, 69, 0.3) 100%);
+  box-shadow: 0px 0px 20px #37E050;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-family: Body-Grotesque;
+  font-weight: 800;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+  display: block;
+  font-size: 20px; }
+
+.page-caption {
+  font-family: Body-Grotesque;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 50px; }
+
 .footer {
   padding-top: 10px;
   background-image: url("../img/main-prizes-bg.png");
@@ -453,7 +476,26 @@ body {
     font-weight: 500;
     color: #fff;
     margin-left: 94px;
-    cursor: pointer; }
+    cursor: pointer;
+    position: relative; }
+    .header-sign-in:before {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+              transform: translateX(-50%);
+      content: none;
+      width: 45px;
+      height: 16px;
+      background-image: url("../img/menu-active.png");
+      background-size: contain;
+      background-repeat: no-repeat; }
+      @media (max-width: 992px) {
+        .header-sign-in:before {
+          content: none; } }
+    .header-sign-in.active:before {
+      content: ''; }
     @media (max-width: 992px) {
       .header-sign-in {
         margin-left: 0; }
@@ -732,7 +774,6 @@ body {
   right: 10px;
   top: 10px; }
 
-.popup-form-done
 .forgot-password {
   font-size: 12px;
   line-height: calc(15 / 12);
@@ -1368,5 +1409,205 @@ body {
     bottom: 61px; }
   .main-banner-btn {
     border-radius: 20px; } }
+
+.account {
+  color: #fff;
+  padding-top: 96px;
+  position: relative;
+  background-image: url("../img/acc-shine-right-top-.png"), url("../img/acc-shine-right-bottom.png"), url("../img/acc-shine-left.png");
+  background-repeat: no-repeat;
+  background-size: initial;
+  background-position: right top, right bottom, left top; }
+  .account-wrap {
+    position: relative; }
+  .account__header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-left: 62px; }
+  .account__add-card {
+    margin-top: 35px;
+    position: relative;
+    padding: 10px 10px 5px 20px;
+    border: 1px solid #37E050;
+    border-radius: 20px;
+    -webkit-filter: drop-shadow(0px 0px 4px #37E050);
+            filter: drop-shadow(0px 0px 4px #37E050);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content; }
+    .account__add-card-wrap {
+      width: 30%; }
+    .account__add-card:before {
+      position: absolute;
+      content: '';
+      width: 55px;
+      height: 39px;
+      background-image: url("../img/card-1.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      z-index: 10;
+      top: -16px;
+      right: -8px; }
+    .account__add-card_text {
+      letter-spacing: -0.02em;
+      font-size: 14px;
+      line-height: 18px; }
+    .account__add-card_link {
+      position: absolute;
+      display: block;
+      cursor: pointer;
+      z-index: 12;
+      box-shadow: 0px 0px 20px #37E050;
+      background-color: #00E245;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      left: 0;
+      top: 50%;
+      -webkit-transform: translateY(-50%) translateX(-50%);
+          -ms-transform: translateY(-50%) translateX(-50%);
+              transform: translateY(-50%) translateX(-50%); }
+      .account__add-card_link:before {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 2px;
+        z-index: 13;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        background-color: #fff; }
+      .account__add-card_link:after {
+        content: '';
+        position: absolute;
+        height: 10px;
+        width: 2px;
+        z-index: 13;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        background-color: #fff; }
+  .account__info {
+    width: 30%;
+    text-align: right;
+    margin-top: 15px; }
+    .account__info_fio {
+      margin-bottom: 15px;
+      letter-spacing: -0.02em;
+      font-size: 16px;
+      font-weight: 600; }
+    .account__info_text {
+      font-size: 12px;
+      margin-bottom: 4px;
+      position: relative;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+      margin-left: auto; }
+      .account__info_text:before {
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+        content: '';
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left center;
+        width: 12px;
+        height: 12px; }
+      .account__info_text.email:before {
+        background-image: url("../img/email-icon.png");
+        left: -21px; }
+      .account__info_text.phone:before {
+        background-image: url("../img/phone-icon.png");
+        left: -17px; }
+  .account__caption {
+    margin-left: -50px; }
+    .account__caption_logout {
+      font-size: 12px;
+      line-height: 15px;
+      text-align: center;
+      -webkit-text-decoration-line: underline;
+              text-decoration-line: underline;
+      display: block;
+      margin: 0 auto;
+      color: #fff;
+      opacity: .7;
+      cursor: pointer; }
+  .account__main {
+    background-image: url("../img/main-prizes-bg.png");
+    background-position: center;
+    background-repeat: no-repeat; }
+    .account__main .container {
+      max-width: 1095px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
+    .account__main_round {
+      border-radius: 50%;
+      background: -webkit-linear-gradient(246.17deg, #00E245 6.9%, rgba(0, 226, 69, 0.05) 85.64%);
+      background: linear-gradient(203.83deg, #00E245 6.9%, rgba(0, 226, 69, 0.05) 85.64%);
+      min-width: 570px;
+      height: 584px;
+      position: relative;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap; }
+      .account__main_round:first-of-type {
+        margin-right: -37px; }
+      .account__main_round:last-of-type {
+        margin-left: -37px; }
+      .account__main_round-caption {
+        position: absolute;
+        text-transform: uppercase;
+        font-weight: 800;
+        font-size: 30px;
+        text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+        font-family: Body-Grotesque;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
+        top: 50px; }
+      .account__main_round-text {
+        text-align: center;
+        letter-spacing: -0.02em;
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: bold; }
+      .account__main_round-btn {
+        width: 237px;
+        margin-top: 13px; }
+  .account .footer {
+    background-image: none; }
 
 /*# sourceMappingURL=main.css.map */
