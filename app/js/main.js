@@ -125,4 +125,37 @@ window.addEventListener('load', function () {
         }
     });
 
+    (function mobMenu() {
+        if(!document.querySelector('.header-nav')) {
+            return;
+        }
+
+        document.querySelector('.mob-menu-btn')
+            .addEventListener('click', function (e) {
+                this.classList.toggle('active');
+                document.querySelector('.header-nav')
+                    .classList.toggle('active');
+                document.querySelector('.header')
+                    .classList.toggle('active');
+            })
+    })();
+
+    (function fixHeader() {
+
+        const header = document.querySelector('.header');
+        let sticky = header.offsetTop;
+
+        if (document.querySelector('.header-nav')) {
+            window.addEventListener('scroll', scrollHandler);
+        }
+
+        function scrollHandler() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("active");
+            } else {
+                header.classList.remove("active");
+            }
+        }
+    })();
+
 });

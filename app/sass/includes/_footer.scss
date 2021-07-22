@@ -1,9 +1,14 @@
 .footer {
   padding-top: 10px;
   background-image: url('../../img/main-prizes-bg.png');
+  position: relative;
 
   @include response-to(huge) {
     padding-top: 25px;
+  }
+
+  @include response-to(small) {
+    padding-top: 100px;
   }
 
   &_wrap {
@@ -11,7 +16,7 @@
     background-image: url('../../img/footer-bg.png');
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center bottom;
+    background-position: center top;
 
     @include response-to(huge) {
       padding-top: 25px;
@@ -28,13 +33,19 @@
   }
 
   &-inner {
-    padding: 26px 132px 15px;
+    padding: 26px 0 15px;
+    max-width: 1178px;
+    margin: 0 auto;
     position: relative;
     z-index: 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @include response-to(small) {
+      align-items: flex-start;
+    }
   }
 
   &-img {
@@ -42,6 +53,15 @@
     margin-bottom: 24px;
     margin-left: 0;
     margin-right: auto;
+
+    @include response-to(huge) {
+      margin-left: 50px;
+    }
+
+    @include response-to(small) {
+      margin-left: auto;
+      margin-right: auto;
+    }
 
     & img {
       width: 100%;
@@ -73,6 +93,14 @@
     position: relative;
     width: 100%;
 
+    @include response-to(medium) {
+      justify-content: space-between;
+    }
+
+    @include response-to(small) {
+      flex-direction: column;
+    }
+
     &-text {
       font-family: "AvantGarde", sans-serif;
       font-size: 12px;
@@ -84,6 +112,16 @@
 
   &-content {
     text-align: center;
+
+    @include response-to(medium) {
+      flex-basis: 46%;
+    }
+
+    @include response-to(small) {
+      order: 3;
+      flex-basis: 100%;
+      margin-top: 22px;
+    }
   }
 
   &-nav {
@@ -91,8 +129,29 @@
     justify-content: center;
     margin-bottom: 20px;
 
+    @include response-to(small) {
+      margin-bottom: -100px;
+    }
+
+    &-item {
+
+      @include response-to(small) {
+        margin-bottom: 16px;
+      }
+    }
+
     &-item:nth-child(2) {
       margin: 0 32px;
+
+      @include response-to(small) {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 16px;
+      }
+    }
+
+    @include response-to(small) {
+      flex-direction: column;
     }
   }
 
@@ -102,6 +161,15 @@
     position: absolute;
     left: 0;
     bottom: 0;
+
+    @include response-to(medium) {
+      position: static;
+      flex-basis: 25%;
+    }
+
+    @include response-to(small) {
+      order: 2;
+    }
   }
 
   &-phone {
@@ -109,6 +177,12 @@
     line-height: calc(27 / 21);
     color: #37e050;
     font-weight: 900;
+
+    @include response-to(small) {
+      font-size: 18px;
+      font-weight: 500;
+      margin-top: 3px;
+    }
   }
 
   &-mail {
@@ -116,12 +190,25 @@
     line-height: calc(18 / 16);
     font-weight: 400;
     color: #37e050;
+
+    @include response-to(small) {
+      text-align: right;
+      text-decoration: underline;
+      font-size: 11px;
+      margin-top: 5px;
+    }
   }
 
   &-socials {
     position: absolute;
     right: 0;
     bottom: 0;
+
+    @include response-to(medium) {
+      position: static;
+      flex-basis: 25%;
+      text-align: right;
+    }
 
     & a {
       margin-right: 8px;
@@ -135,43 +222,30 @@
       }
     }
   }
-}
 
-@media (max-width: 1440px) {
-  .footer-inner {
-    padding: 1.805vw 9.166vw 1.041vw;
-  }
-  .footer-img {
-    width: 9.791vw;
-    margin-bottom: 1.666vw;
-  }
-  .footer-text {
-    font-size: 0.833vw;
-    max-width: 72.916vw;
-    margin-bottom: 1.388vw;
-  }
-  .footer-nav-item a {
-    font-size: 0.833vw;
-  }
-  .footer-bottom-text {
-    font-size: 0.833vw;
-  }
-  .footer-nav {
-    margin-bottom: 1.388vw;
-  }
-  .footer-nav-item:nth-child(2) {
-    margin: 0 2.222vw;
-  }
-  .footer-phone {
-    font-size: 1.458vw;
-  }
-  .footer-mail {
-    font-size: 1.111vw;
-  }
-  .footer-socials a {
-    margin-right: 0.555vw;
-  }
-  .footer-socials a img {
-    width: 2.013vw;
+  &-white-bg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 75%;
+    background-color: #fff;
+    z-index: 1;
+
+    @include response-to(huge) {
+      top: 72%;
+    }
+
+    @media(max-width: 1183px) {
+      top: 60%;
+    }
+
+    @include response-to(medium) {
+      top: 49%;
+    }
+
+    @include response-to(medium) {
+      top: 30%;
+    }
   }
 }

@@ -6,16 +6,61 @@
   width: 100%;
   z-index: 100;
 
+  &.active {
+    background-color: #414650;
+  }
+
+  & .container {
+
+    @include response-to(medium) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
   &-inner {
     display: flex;
     justify-content: flex-end;
     padding: 0;
     position: relative;
+
+    @include response-to(medium) {
+      justify-content: space-between;
+      padding: 9px 30px;
+      align-items: center;
+    }
   }
 
   &-nav {
     display: flex;
     align-items: center;
+
+    @include response-to(medium) {
+      display: none;
+      position: absolute;
+      z-index: 100;
+      background-color: #414650;
+      width: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      flex-direction: column;
+      top: 78px;
+      align-items: flex-start;
+      padding-top: 55px;
+      height: calc(100vh - 80px);
+
+      &.active {
+        display: flex;
+      }
+    }
+
+    & .main-banner-btn-container {
+      display: none;
+
+      @include response-to(medium) {
+        display: block;
+      }
+    }
 
     &-item {
       padding: 20px 0;
@@ -28,6 +73,12 @@
       font-style: italic;
       position: relative;
 
+      @include response-to(medium) {
+        padding: 19px 0 19px 70px;
+        font-size: 22px;
+        margin-left: 0;
+      }
+
       &:before {
         position: absolute;
         top: 0;
@@ -39,14 +90,16 @@
         background-image: url('../../img/menu-active.png');
         background-size: contain;
         background-repeat: no-repeat;
+
+        @include response-to(medium) {
+          left: -13px;
+          transform: translateX(0) translateY(-50%) rotate(270deg);
+          top: 50%;
+        }
       }
 
       @include on-event {
         text-decoration: underline;
-      }
-
-      @include response-to(huge) {
-        margin-left: 2.777vw;
       }
 
       &.active {
@@ -69,9 +122,14 @@
     font-weight: 500;
     color: #fff;
     margin-left: 94px;
+    cursor: pointer;
 
-    @include response-to(huge) {
-      margin-left: 6.527vw;
+    @include response-to(medium) {
+      margin-left: 0;
+
+      & span {
+        display: none;
+      }
     }
 
     & img {
@@ -81,6 +139,12 @@
       @include response-to(huge) {
         margin-right: 0.486vw;
         width: 0.694vw;
+      }
+
+      @include response-to(medium) {
+        width: 23px;
+        height: 30px;
+        margin: 0;
       }
     }
   }
@@ -93,6 +157,10 @@
     @include response-to(huge) {
       top: 1.875vw;
     }
+
+    @include response-to(medium) {
+      position: static;
+    }
   }
 
   &-logo-1 {
@@ -103,6 +171,11 @@
       width: 4.861vw;
       margin-right: 0.902vw;
     }
+
+    @include response-to(medium) {
+      margin-right: 18px;
+      width: 60px;
+    }
   }
 
   &-logo-2 {
@@ -111,6 +184,29 @@
     @include response-to(huge) {
       width: 4.861vw;
       margin-right: 0.902vw;
+    }
+
+    @include response-to(medium) {
+      margin-right: 0;
+      width: 55px;
+    }
+  }
+
+  .mob-menu-btn {
+    display: none;
+    width: 34px;
+    height: 23px;
+    background-image: url('../../img/hide-menu.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include response-to(medium) {
+      display: block;
+    }
+
+    &.active {
+      background-image: url('../../img/show-menu.png');
     }
   }
 }
