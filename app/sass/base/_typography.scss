@@ -1,0 +1,35 @@
+$avant-grade: 'AvantGardeGothicCTT';
+$body-grotesque: 'Body-Grotesque';
+
+$dir: '../fonts';
+
+@font-face {
+  font-family: AvantGarde;
+  src: url('../../fonts/AvantGardeGothicCTT.ttf');
+}
+
+@font-face {
+  font-family: OfficinaSansBlackC;
+  src: url('../../fonts/officinasanblkitctt.ttf');
+}
+
+@font-face {
+  font-family: Body-Grotesque;
+  src: url('../../fonts/Body-Grotesque-Bold-trial.ttf');
+}
+
+@font-face {
+  font-family: Body-Grotesque;
+  src: url('../../fonts/Body-Grotesque-Fit-Bold-trial.ttf');
+}
+
+@font-face {
+  font-family: Body-Grotesque;
+  src: url('../../fonts/Body-Grotesque-Large-Bold-trial.ttf');
+}
+
+@font-face {
+  font-family: Body-Grotesque;
+  src: url('../../fonts/Body-Grotesque-Slim-Bold-trial.ttf');
+  font-weight: 800;
+}

@@ -1,0 +1,116 @@
+.header {
+  background-color: rgba(255, 255, 255, 0.1);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+
+  &-inner {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    position: relative;
+  }
+
+  &-nav {
+    display: flex;
+    align-items: center;
+
+    &-item {
+      padding: 20px 0;
+      font-size: 12px;
+      line-height: calc(15 / 12);
+      font-weight: 500;
+      color: #fff;
+      margin-left: 40px;
+      text-transform: uppercase;
+      font-style: italic;
+      position: relative;
+
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        content: none;
+        width: 45px;
+        height: 16px;
+        background-image: url('../../img/menu-active.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      @include on-event {
+        text-decoration: underline;
+      }
+
+      @include response-to(huge) {
+        margin-left: 2.777vw;
+      }
+
+      &.active {
+        font-weight: 700;
+
+        &:before {
+          content: '';
+        }
+      }
+    }
+  }
+
+  &-sign-in {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 12px;
+    line-height: calc(15 / 12);
+    font-weight: 500;
+    color: #fff;
+    margin-left: 94px;
+
+    @include response-to(huge) {
+      margin-left: 6.527vw;
+    }
+
+    & img {
+      margin-right: 7px;
+      width: 10px;
+
+      @include response-to(huge) {
+        margin-right: 0.486vw;
+        width: 0.694vw;
+      }
+    }
+  }
+
+  &-imgs {
+    position: absolute;
+    left: 62px;
+    top: 27px;
+
+    @include response-to(huge) {
+      top: 1.875vw;
+    }
+  }
+
+  &-logo-1 {
+    width: 70px;
+    margin-right: 13px;
+
+    @include response-to(huge) {
+      width: 4.861vw;
+      margin-right: 0.902vw;
+    }
+  }
+
+  &-logo-2 {
+    width: 64px;
+
+    @include response-to(huge) {
+      width: 4.861vw;
+      margin-right: 0.902vw;
+    }
+  }
+}
