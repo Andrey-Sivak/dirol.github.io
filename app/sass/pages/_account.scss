@@ -224,6 +224,8 @@
       &-btn {
         width: 237px;
         margin-top: 13px;
+        margin-left: auto;
+        margin-right: auto;
       }
 
       &-slider {
@@ -312,6 +314,117 @@
         &--btn {
           width: 127px;
           margin: 0 auto;
+        }
+      }
+
+      &-table {
+        max-width: 370px;
+        margin: 35px auto;
+
+        &--body {
+          margin-top: 10px;
+          max-height: 285px;
+          overflow-y: scroll;
+
+          &::-webkit-scrollbar {
+            width: 10px;
+            padding: 2px;
+          }
+
+          &::-webkit-scrollbar-track {
+            background-color: #fff;
+            border-radius: 20px;
+          }
+
+          &::-webkit-scrollbar-thumb {
+            background-color: $green-color;
+            border-radius: 20px;
+            border: 2px solid #fff;
+          }
+        }
+
+        &--row {
+          display: flex;
+          width: 100%;
+          align-items: center;
+          margin-bottom: 16px;
+
+          & .photo {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            overflow: hidden;
+            @include flex-center();
+          }
+
+          & .date {
+            width: 65px;
+            margin: 0 16%;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+          }
+
+          & .status {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+          }
+
+          &.denied {
+
+            .photo {
+              position: relative;
+
+              &:before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 23px;
+                height: 23px;
+                background-image: url('../../img/denied-photo.png');
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+              }
+            }
+
+            .status {
+              position: relative;
+              color: #F46E65;
+              text-decoration: underline;
+              font-weight: 600;
+              cursor: pointer;
+
+              &:before {
+                content: '';
+                position: absolute;
+                width: 17px;
+                height: 17px;
+                top: 50%;
+                right: -22px;
+                transform: translateY(-50%);
+                background-image: url('../../img/denied-answer.png');
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+              }
+
+              & .tooltip {
+                position: absolute;
+                width: 360px;
+                padding: 30px 0;
+                text-align: center;
+                background: #414650;
+                box-shadow: 0px 0px 20px #00E245;
+                border-radius: 30px;
+                bottom: 6px;
+                right: -98%;
+              }
+            }
+          }
         }
       }
     }
