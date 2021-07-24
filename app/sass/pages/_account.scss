@@ -1,4 +1,5 @@
 .account {
+  overflow-x: hidden;
   color: #fff;
   padding-top: 96px;
   position: relative;
@@ -8,6 +9,12 @@
   background-repeat: no-repeat;
   background-size: initial;
   background-position: right top, right bottom, left top;
+
+  @include response-to(small) {
+    background-image: url('../../img/top-right-shine-mob.png');
+    background-repeat: no-repeat;
+
+  }
 
   &-wrap {
     position: relative;
@@ -566,8 +573,14 @@
 
   &-bg-triangle {
     position: absolute;
-    top: 0;
+    top: -35px;
     left: 50%;
     transform: translateX(-50%);
+
+    @include response-to(small) {
+      top: 45%;
+      left: -11%;
+      transform: translateY(-50%);
+    }
   }
 }

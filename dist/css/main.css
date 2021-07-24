@@ -1679,6 +1679,7 @@ body {
     border-radius: 20px; } }
 
 .account {
+  overflow-x: hidden;
   color: #fff;
   padding-top: 96px;
   position: relative;
@@ -1686,6 +1687,10 @@ body {
   background-repeat: no-repeat;
   background-size: initial;
   background-position: right top, right bottom, left top; }
+  @media (max-width: 767px) {
+    .account {
+      background-image: url("../img/top-right-shine-mob.png");
+      background-repeat: no-repeat; } }
   .account-wrap {
     position: relative; }
   .account__header {
@@ -2195,10 +2200,17 @@ body {
         margin-top: -70px; } }
   .account-bg-triangle {
     position: absolute;
-    top: 0;
+    top: -35px;
     left: 50%;
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
             transform: translateX(-50%); }
+    @media (max-width: 767px) {
+      .account-bg-triangle {
+        top: 45%;
+        left: -11%;
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%); } }
 
 /*# sourceMappingURL=main.css.map */
