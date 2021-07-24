@@ -1,0 +1,318 @@
+.winners {
+  padding-top: 96px;
+  position: relative;
+  background-image: url('../../img/acc-shine-right-top-.png'),
+  url("../../img/acc-shine-right-bottom.png"),
+  url("../../img/acc-shine-left.png");
+  background-repeat: no-repeat;
+  background-size: initial;
+  background-position: right top, right bottom, left top;
+
+  @include response-to(small) {
+    background-image: url('../../img/top-right-shine-mob.png');
+    background-repeat: no-repeat;
+  }
+
+  &__search {
+    margin: 32px auto 56px;
+    width: 279px;
+    position: relative;
+    border: 1px solid #37E050;
+    border-radius: 40px;
+    padding: 6px;
+
+    @include response-to(small) {
+      margin: 38px auto;
+    }
+
+    &_input {
+      padding-left: 10px;
+      padding-top: 14px;
+      padding-bottom: 14px;
+      width: 190px;
+      background-color: transparent;
+      letter-spacing: -0.02em;
+      color: #fff;
+      font-size: 20px;
+
+      &::placeholder {
+        font-size: 14px;
+        color: #fff;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      }
+    }
+
+    &_btn {
+      position: absolute;
+      border-radius: 50%;
+      background-image: url("../../img/search-icon.png"),
+                        linear-gradient(203.83deg, #00E245 6.9%, rgba(0, 226, 69, 0.05) 85.64%);
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 49px;
+      height: 49px;
+      cursor: pointer;
+      z-index: 10;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 7px;
+      border: none;
+      background-color: transparent;
+    }
+  }
+
+  &__wrap {
+    max-width: 811px;
+    margin: 0 auto;
+  }
+
+  &__tabs {
+    display: flex;
+    margin-bottom: 57px;
+
+    @include response-to(small) {
+      margin-bottom: 32px;
+    }
+
+    &_item {
+      width: 35%;
+      opacity: 0.5;
+      border: 1px solid #37E050;
+      filter: drop-shadow(0px 0px 4px #37E050);
+      border-radius: 40px;
+      text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+      font-family: Body-Grotesque;
+      font-weight: 800;
+      font-size: 30px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #fff;
+      padding: 12px 0 13px;
+      cursor: pointer;
+      @include transition-ease;
+
+      @include on-event {
+        opacity: 1;
+      }
+
+      @include response-to(small) {
+        font-size: 16px;
+        padding: 6px 0;
+        width: 40%;
+      }
+
+      &:nth-child(2) {
+        margin: 0 -3%;
+      }
+
+      &:first-of-type {
+
+        @include response-to(small) {
+          margin-left: -15px;
+        }
+      }
+
+      &:last-of-type {
+
+        @include response-to(small) {
+          margin-right: -15px;
+        }
+      }
+
+      &.active {
+        background: linear-gradient(263.95deg, rgba(0, 226, 69, 0.24) 24%, #00E245 84%);
+        opacity: 1;
+      }
+    }
+  }
+
+  &__list {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 30px;
+    @include transition-ease;
+    opacity: 0;
+    z-index: -1000;
+    position: absolute;
+
+    &.active {
+      position: static;
+      opacity: 1;
+      z-index: 100;
+    }
+
+    &_row {
+      display: flex;
+      width: 100%;
+      margin-bottom: 30px;
+
+      @include response-to(small) {
+        position: relative;
+        align-items: flex-start;
+        padding-top: 19px;
+        margin-bottom: 20px;
+        justify-content: space-between;
+      }
+
+      & > p {
+        width: 25%;
+        font-weight: 600;
+
+        @include response-to(small) {
+          width: 49%;
+        }
+
+        &.phone {
+
+          @include response-to(small) {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+          }
+        }
+
+        &.date {
+          position: absolute;
+          top: 0;
+          left: 0;
+          font-size: 12px;
+          font-weight: 400;
+        }
+      }
+    }
+
+    &_header {
+      font-size: 12px;
+
+      @include response-to(small) {
+        display: none;
+      }
+    }
+
+    &_table {
+      max-height: 420px;
+      overflow-y: scroll;
+
+      &::-webkit-scrollbar {
+        width: 10px;
+        padding: 2px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: transparent;
+        border-radius: 20px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: #fff;
+        border-radius: 20px;
+        border: 2px solid transparent;
+      }
+
+      &-wrap {
+        position: relative;
+
+        &:before {
+          position: absolute;
+          content: '';
+          top: 0;
+          bottom: 0;
+          right: 4px;
+          width: 2px;
+          background-color: #fff;
+        }
+      }
+    }
+
+    &.daily {
+
+      & .prize {
+        font-weight: 500;
+        max-width: 260px;
+
+        & .green {
+          font-weight: 600;
+          color: $green-color;
+        }
+      }
+    }
+
+    &.weekly {
+
+      & .prize {
+        display: flex;
+        align-items: center;
+
+        & .prize_img {
+          margin-right: 6px;
+          max-width: 29px;
+          height: 35px;
+        }
+      }
+    }
+
+    &.monthly {
+
+      & .winners__list_table {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      & .winners__list_caption {
+        color: #00E245;
+        text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.9);
+        font-family: Body-Grotesque;
+        font-weight: 800;
+        font-size: 30px;
+        margin-bottom: 50px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      & .winner {
+        border-radius: 50%;
+        width: 205px;
+        height: 205px;
+        background: linear-gradient(174.13deg, #00E245 4.66%, rgba(0, 226, 69, 0.05) 65.76%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &__text {
+          font-weight: bold;
+          font-size: 20px;
+          letter-spacing: -0.02em;
+          text-align: center;
+          margin-bottom: 10px;
+
+          &.date {
+            font-weight: normal;
+            font-size: 16px;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

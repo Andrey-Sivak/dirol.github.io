@@ -203,4 +203,35 @@ window.addEventListener('load', function () {
         })
     })();
 
+    (function winners() {
+        if (!document.querySelector('.winners__wrap')) {
+            return;
+        }
+
+        const wrap = document.querySelector('.winners__wrap');
+        const tabs = [...wrap.querySelectorAll('.winners__tabs_item')];
+
+        tabs.forEach(t => {
+            t.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                if (this.classList.contains('active')) {
+                    return;
+                }
+                const category = this.dataset.winners;
+
+                document.querySelector('.winners__tabs_item.active')
+                    .classList.remove('active');
+                document.querySelector('.winners__list.active')
+                    .classList.remove('active');
+
+                setTimeout(() => {
+                    this.classList.add('active');
+                    document.querySelector(`.winners__list.${category}`)
+                        .classList.add('active');
+                }, 300);
+            })
+        })
+    })();
+
 });
