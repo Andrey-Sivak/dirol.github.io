@@ -4,9 +4,13 @@
   left: 0;
   top: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 1000;
 
   &.active {
+    background-color: #414650;
+  }
+
+  &.scroll {
     background-color: #414650;
   }
 
@@ -46,11 +50,32 @@
       flex-direction: column;
       top: 78px;
       align-items: flex-start;
-      padding-top: 55px;
-      height: calc(100vh - 80px);
+      padding-top: 35px;
+      height: 100vh;
+      overflow-y: scroll;
+      padding-bottom: 110px;
 
       &.active {
         display: flex;
+      }
+    }
+
+    & .dont-drop {
+      color: $green-color;
+      font-family: Body-Grotesque;
+      text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.9);
+      font-weight: 800;
+
+      text-transform: uppercase;
+
+      @include response-to(small) {
+        font-size: 24px;
+        padding-left: 70px;
+        margin-bottom: 14px;
+      }
+
+      @include response-to(medium) {
+        display: block;
       }
     }
 
@@ -121,7 +146,7 @@
     line-height: calc(15 / 12);
     font-weight: 500;
     color: #fff;
-    margin-left: 94px;
+    margin-left: 40px;
     cursor: pointer;
     position: relative;
 
@@ -146,6 +171,10 @@
 
       &:before {
         content: '';
+
+        @include response-to(medium) {
+          content: none;
+        }
       }
     }
 
@@ -154,6 +183,14 @@
 
       & span {
         display: none;
+      }
+    }
+
+    & svg {
+      display: none;
+
+      @include response-to(medium) {
+        display: block;
       }
     }
 
@@ -167,9 +204,7 @@
       }
 
       @include response-to(medium) {
-        width: 23px;
-        height: 30px;
-        margin: 0;
+        display: none;
       }
     }
   }
@@ -233,5 +268,22 @@
     &.active {
       background-image: url('../../img/show-menu.png');
     }
+  }
+
+  & .main-banner-btn-container {
+    position: static;
+    transform: unset;
+    margin-top: 27px;
+    width: 100vw;
+  }
+
+  & .main-banner-btn_wrap:before {
+    right: 0;
+    width: calc((95% - 276px) / 2);
+  }
+
+  & .main-banner-btn_wrap:after {
+    left: 0;
+    width: calc((95% - 276px) / 2);
   }
 }

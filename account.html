@@ -11,6 +11,17 @@
 </head>
 <body class="account">
 
+<svg class="account-bg-triangle" width="1053" height="984" viewBox="0 0 1053 984" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path opacity="0.5" d="M0 984L1053 496.652L140.247 -37L0 984Z" fill="url(#paint0_linear)"/>
+  <defs>
+    <linearGradient id="paint0_linear" x1="659.834" y1="-74.9426" x2="446.733" y2="876.424" gradientUnits="userSpaceOnUse">
+      <stop offset="0.0947848" stop-color="#00E245"/>
+      <stop offset="0.81093" stop-color="#00E245" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+
 <header>
   <div class="header">
     <div class="container">
@@ -21,6 +32,7 @@
           <img src="./dist/img/logo-5.png" class="header-logo-2" />
         </div>
         <nav class="header-nav">
+          <p class="dont-drop">don’t drop</p>
           <div class="header-nav-item">
             <a href="#">Главная</a>
           </div>
@@ -47,6 +59,9 @@
         </nav>
         <a href="#" class="header-sign-in pop-op active" data-popup="sign-up">
           <img src="./dist/img/human-icon.png" alt="img" />
+          <svg width="24" height="30" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.31778 13.5826H0.817776L0.910742 2.24963C0.913824 1.87392 1.06604 1.51359 1.33389 1.24793C1.60175 0.982258 1.96331 0.833008 2.33903 0.833008H22.1724C22.5481 0.833008 22.9072 0.982258 23.1707 1.24793C23.4342 1.51359 23.5805 1.87392 23.5774 2.24963L23.3682 27.7488C23.3652 28.1245 23.2129 28.4848 22.9451 28.7505C22.6772 29.0161 22.3157 29.1654 21.9399 29.1654H2.10661C1.73089 29.1654 1.37178 29.0161 1.10828 28.7505C0.844785 28.4848 0.698485 28.1245 0.701567 27.7488L0.794534 16.4158H9.29453L9.25967 20.6657L16.3895 14.9992L9.35264 9.33272L9.31778 13.5826Z" fill="white"/>
+          </svg>
           <span>Личный кабинет</span>
         </a>
       </div>
@@ -79,6 +94,10 @@
         <p class="account__main_round-caption">МОИ ЧЕКИ</p>
         <div class="account__main_round-content">
           <div class="account__main_round-table">
+            <!--<div class="tooltip">
+              <p class="tooltip__caption">чек отклонён</p>
+              <p class="tooltip__text">Этот чек уже был загружен ранее. <br> Один чек можно загрузить <br> только один раз.</p>
+            </div>-->
             <div class="account__main_round-table--row">
               <div class="photo">Фото</div>
               <div class="date">Дата</div>
@@ -104,12 +123,7 @@
                   <img src="./dist/img/order.png" alt="img">
                 </div>
                 <div class="date">09.09.20</div>
-                <div class="status has-tooltip">Отклонен
-                  <!--<div class="tooltip">
-                    <p class="tooltip__caption">чек отклонён</p>
-                    <p class="tooltip__text">Этот чек уже был загружен ранее. <br> Один чек можно загрузить <br> только один раз.</p>
-                  </div>-->
-                </div>
+                <div class="status have-tooltip" data-tooltip="check-denied">Отклонен</div>
               </div>
               <div class="account__main_round-table--row">
                 <div class="photo">
@@ -180,7 +194,18 @@
         </div>
       </div>
       <div class="account__main_round">
-        <div class="has-prizes"></div>
+        <svg class="prizes-shine" width="630" height="644" viewBox="0 0 630 644" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g opacity="0.7" filter="url(#filter0_f)">
+            <path d="M249.257 164.113C314.402 116.932 370.546 211.502 412.378 258.071C454.211 304.64 511.002 319.672 499.476 361.718C487.949 403.764 420.407 512.587 272.697 453.278C124.988 393.97 123.499 255.632 249.257 164.113Z" fill="white"/>
+          </g>
+          <defs>
+            <filter id="filter0_f" x="0.470093" y="0.615479" width="629.53" height="643.367" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+              <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+              <feGaussianBlur stdDeviation="50" result="effect1_foregroundBlur"/>
+            </filter>
+          </defs>
+        </svg>
         <p class="account__main_round-caption">МОИ ПРИЗЫ</p>
         <div class="account__main_round-content">
 
@@ -210,15 +235,6 @@
                 <img src="./dist/img/bag.png" alt="img">
               </div>
               <p class="account__main_round-slide--title">модная сумка</p>
-              <p class="account__main_round-slide--note"><span>от Dirol x Maggi</span> <a href="https://www.instagram.com/maggigad/?hl=ru">@maggigad</a></p>
-              <p class="account__main_round-slide--date">Дата: 15.08.2021</p>
-              <a href="#" class="btn account__main_round-slide--btn">Получить</a>
-            </div>
-            <div class="account__main_round-slide prize">
-              <div class="account__main_round-slide--img">
-                <img src="./dist/img/socks.png" alt="img">
-              </div>
-              <p class="account__main_round-slide--title">модные носки</p>
               <p class="account__main_round-slide--note"><span>от Dirol x Maggi</span> <a href="https://www.instagram.com/maggigad/?hl=ru">@maggigad</a></p>
               <p class="account__main_round-slide--date">Дата: 15.08.2021</p>
               <a href="#" class="btn account__main_round-slide--btn">Получить</a>

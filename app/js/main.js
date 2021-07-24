@@ -132,6 +132,17 @@ window.addEventListener('load', function () {
 
         document.querySelector('.mob-menu-btn')
             .addEventListener('click', function (e) {
+                e.preventDefault();
+
+                if (!this.classList.contains('active')) {
+                    document.body.style.overflowY = 'hidden';
+                }
+
+                if (this.classList.contains('active')
+                    && document.body.style.overflowY === 'hidden') {
+                    document.body.style.overflowY = 'scroll';
+                }
+
                 this.classList.toggle('active');
                 document.querySelector('.header-nav')
                     .classList.toggle('active');
@@ -151,9 +162,9 @@ window.addEventListener('load', function () {
 
         function scrollHandler() {
             if (window.pageYOffset > sticky) {
-                header.classList.add("active");
+                header.classList.add("scroll");
             } else {
-                header.classList.remove("active");
+                header.classList.remove("scroll");
             }
         }
     })();
@@ -171,6 +182,25 @@ window.addEventListener('load', function () {
             nextArrow: '<div class="slick-next"><span></span></div>',
             autoplay: false,
         });
+    })();
+
+    (function tooltips() {
+        if (!document.querySelector('.tooltip')) {
+            return;
+        }
+
+        const haveTooltipElements = [...document.querySelectorAll('.have-tooltip')];
+
+        haveTooltipElements.forEach(h => {
+            h.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const target = e.target;
+                const tooltipName = target.dataset.tooltip;
+                document.querySelector(`.${tooltipName}`)
+                    .classList.toggle('active');
+            })
+        })
     })();
 
 });

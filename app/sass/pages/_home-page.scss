@@ -1,12 +1,7 @@
-
 .main-banner {
   position: relative;
   padding-top: 60px;
   padding-bottom: 95px;
-  background-image: url('../../img/home-page-center-shine.png');
-  background-repeat: no-repeat;
-  background-size: initial;
-  background-position: left bottom;
   height: 100%;
   display: flex;
   align-items: flex-end;
@@ -25,14 +20,22 @@
   bottom: -208px;
   width: 100%;
   z-index: 3;
+  height: 700px;
+  background-image: linear-gradient(0deg, #414650 32%, rgba(65, 70, 80, .3) 85.21%);
+  box-shadow: 0px -4px 20px rgba(0, 0, 0, 0.25);
+  clip-path: polygon(100% 0, 100% 100%, 0% 100%, 0 45%);
 
   @include response-to(small) {
-    display: none;
+    bottom: unset;
+    top: 500px;
+    height: 340px;
   }
-}
 
-.main-banner-blur img {
-  width: 100%;
+  @media(max-width: 450px) {
+    height: 320px;
+    top: 445px;
+    clip-path: polygon(100% 10%, 100% 100%, 0% 100%, 0 35%);
+  }
 }
 
 .main-banner-bg-img {
@@ -43,27 +46,34 @@
   z-index: 1;
 
   @include response-to(small) {
-    position: static;
+    position: relative;
+    left: unset;
+    top: unset;
     max-width: 390px;
-    margin: 0 auto;
+    margin: -10px auto 0;
     width: 100%;
+  }
+
+  & svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    &.triangle {
+      top: -155px;
+
+      @include response-to(small) {
+        top: -105px;
+      }
+    }
   }
 }
 
 .main-banner-bg-img img {
   width: 100%;
-
-  @include response-to(small) {
-    display: none;
-  }
-
-  &.mob {
-    display: none;
-
-    @include response-to(small) {
-      display: block;
-    }
-  }
 }
 
 .main-banner-bg-img-2 {
@@ -331,7 +341,7 @@
 
 .main-banner-btn-container {
   position: absolute;
-  z-index: 3;
+  z-index: 10;
   bottom: 27px;
   width: 98.2vw;
   left: 50%;
@@ -364,7 +374,7 @@
   font-weight: 800;
   color: #fff;
   text-shadow: 0 0 9px rgba(0, 0, 0, 0.25);
-  padding: 10px 0 5px;
+  padding: 10px 0 10px;
   text-align: center;
   border-radius: 20px;
   background-color: #00e245;
@@ -390,6 +400,7 @@
 }
 
 .main-prizes-title {
+  font-family: Body-Grotesque;
   font-size: 50px;
   line-height: calc(61 / 50);
   font-weight: 800;
@@ -446,6 +457,7 @@
   margin-bottom: 15px;
 
   & span {
+    font-family: Body-Grotesque;
 
     @include response-to(small) {
       display: none;
@@ -456,9 +468,19 @@
 .main-prizes-item-img {
   margin-bottom: 5px;
   height: 206px;
+  position: relative;
+  @include flex-center();
 
-  @include response-to(small) {
-    height: auto;
+  & svg {
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 191px;
+    margin: 0 auto;
+    display: block;
+    z-index: -1;
   }
 }
 
@@ -565,9 +587,6 @@
 }
 
 @media (max-width: 1440px) {
-  .main-banner-btn-container {
-    bottom: 61px;
-  }
   .main-banner-btn {
     border-radius: 20px;
   }

@@ -9,15 +9,27 @@ $dir: '../fonts';
 }
 
 @font-face {
+  font-family: AvantGarde;
+  src: url('../../fonts/AvantGardeGothicCTT-BoldItalic.ttf');
+}
+
+@font-face {
   font-family: OfficinaSansBlackC;
   src: url('../../fonts/officinasanblkitctt.ttf');
 }
+/*
 
 @font-face {
   font-family: Body-Grotesque;
   src: url('../../fonts/Body-Grotesque-Bold-trial.ttf');
 }
+*/
 
+@font-face {
+  font-family: Body-Grotesque;
+  src: url('../../fonts/Body-Grotesque-SlimExtraBold.ttf');
+}
+/*
 @font-face {
   font-family: Body-Grotesque;
   src: url('../../fonts/Body-Grotesque-Fit-Bold-trial.ttf');
@@ -32,4 +44,4 @@ $dir: '../fonts';
   font-family: Body-Grotesque;
   src: url('../../fonts/Body-Grotesque-Slim-Bold-trial.ttf');
   font-weight: 800;
-}
+}*/

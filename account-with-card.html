@@ -5,8 +5,8 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script src="./dist/js/main.js"></script>
   <link rel="stylesheet" href="./dist/css/main.css">
+  <script src="./dist/js/main.js"></script>
   <title>Document</title>
 </head>
 <body class="account">
@@ -20,6 +20,7 @@
     </linearGradient>
   </defs>
 </svg>
+
 
 <header>
   <div class="header">
@@ -70,10 +71,17 @@
 
 <main class="account-wrap">
   <section class="account__header container">
-    <div class="account__add-card-wrap">
+    <div class="account__add-card-wrap exist-card">
       <div class="account__add-card">
-        <p class="account__add-card_text">Добавить<br>«Выручай-карту»</p>
-        <a href="#" class="account__add-card_link"></a>
+        <div class="account__add-card_text-wrap">
+          <p class="account__add-card_text">1234 5678 9012 3456</p>
+          <div class="ask have-tooltip" data-tooltip="card">
+            <div class="tooltip card">
+              Номер «Выручай-карты» может<br> быть изменён только один раз
+            </div>
+          </div>
+        </div>
+        <a href="#" class="account__add-card_link">Редактировать</a>
       </div>
     </div>
     <div class="account__caption">
@@ -92,14 +100,169 @@
       <div class="account__main_round">
         <p class="account__main_round-caption">МОИ ЧЕКИ</p>
         <div class="account__main_round-content">
-          <p class="account__main_round-text">Вы еще не зарегистрировали <br>ни одного чека.</p>
+          <div class="account__main_round-table">
+            <!--<div class="tooltip">
+              <p class="tooltip__caption">чек отклонён</p>
+              <p class="tooltip__text">Этот чек уже был загружен ранее. <br> Один чек можно загрузить <br> только один раз.</p>
+            </div>-->
+            <div class="account__main_round-table--row">
+              <div class="photo">Фото</div>
+              <div class="date">Дата</div>
+              <div class="status">Статус</div>
+            </div>
+            <div class="account__main_round-table--body">
+              <div class="account__main_round-table--row">
+                <div class="photo">
+                  <img src="./dist/img/order.png" alt="img">
+                </div>
+                <div class="date">09.09.20</div>
+                <div class="status">Одобрен</div>
+              </div>
+              <div class="account__main_round-table--row">
+                <div class="photo">
+                  <img src="./dist/img/order.png" alt="img">
+                </div>
+                <div class="date">09.09.20</div>
+                <div class="status">На модерации</div>
+              </div>
+              <div class="account__main_round-table--row denied">
+                <div class="photo">
+                  <img src="./dist/img/order.png" alt="img">
+                </div>
+                <div class="date">09.09.20</div>
+                <div class="status have-tooltip" data-tooltip="check-denied">Отклонен</div>
+              </div>
+              <div class="account__main_round-table--row">
+                <div class="photo">
+                  <img src="./dist/img/order.png" alt="img">
+                </div>
+                <div class="date">09.09.20</div>
+                <div class="status">Одобрен</div>
+              </div>
+              <div class="account__main_round-table--row">
+                <div class="photo">
+                  <img src="./dist/img/order.png" alt="img">
+                </div>
+                <div class="date">09.09.20</div>
+                <div class="status">Одобрен</div>
+              </div>
+              <div class="account__main_round-table--row">
+                <div class="photo">
+                  <img src="./dist/img/order.png" alt="img">
+                </div>
+                <div class="date">09.09.20</div>
+                <div class="status">На модерации</div>
+              </div>
+              <div class="account__main_round-table--row">
+                <div class="photo">
+                  <img src="./dist/img/order.png" alt="img">
+                </div>
+                <div class="date">09.09.20</div>
+                <div class="status">Одобрен</div>
+              </div>
+              <div class="account__main_round-table--row">
+                <div class="photo">
+                  <img src="./dist/img/order.png" alt="img">
+                </div>
+                <div class="date">09.09.20</div>
+                <div class="status">Одобрен</div>
+              </div>
+              <div class="account__main_round-table--row">
+                <div class="photo">
+                  <img src="./dist/img/order.png" alt="img">
+                </div>
+                <div class="date">09.09.20</div>
+                <div class="status">Одобрен</div>
+              </div>
+              <div class="account__main_round-table--row">
+                <div class="photo">
+                  <img src="./dist/img/order.png" alt="img">
+                </div>
+                <div class="date">09.09.20</div>
+                <div class="status">Одобрен</div>
+              </div>
+              <div class="account__main_round-table--row">
+                <div class="photo">
+                  <img src="./dist/img/order.png" alt="img">
+                </div>
+                <div class="date">09.09.20</div>
+                <div class="status">Одобрен</div>
+              </div>
+              <div class="account__main_round-table--row">
+                <div class="photo">
+                  <img src="./dist/img/order.png" alt="img">
+                </div>
+                <div class="date">09.09.20</div>
+                <div class="status">Одобрен</div>
+              </div>
+            </div>
+          </div>
           <a href="#" class="btn account__main_round-btn">ЗАРЕГИСТРИРОВАТЬ ЧЕК</a>
         </div>
       </div>
       <div class="account__main_round">
+        <svg class="prizes-shine" width="630" height="644" viewBox="0 0 630 644" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g opacity="0.7" filter="url(#filter0_f)">
+            <path d="M249.257 164.113C314.402 116.932 370.546 211.502 412.378 258.071C454.211 304.64 511.002 319.672 499.476 361.718C487.949 403.764 420.407 512.587 272.697 453.278C124.988 393.97 123.499 255.632 249.257 164.113Z" fill="white"/>
+          </g>
+          <defs>
+            <filter id="filter0_f" x="0.470093" y="0.615479" width="629.53" height="643.367" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+              <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+              <feGaussianBlur stdDeviation="50" result="effect1_foregroundBlur"/>
+            </filter>
+          </defs>
+        </svg>
         <p class="account__main_round-caption">МОИ ПРИЗЫ</p>
         <div class="account__main_round-content">
-          <p class="account__main_round-text">Вы еще не получили ни <br>одного приза. Скорее <br>регистрируйте чеки!</p>
+
+          <div class="account__main_round-slider">
+
+            <!-- слайд с баллами -->
+            <div class="account__main_round-slide points">
+              <div class="account__main_round-slide--img">
+                <img src="./dist/img/big-card.png" alt="img">
+              </div>
+              <p class="account__main_round-slide--title">1000 баллов</p>
+              <p class="account__main_round-slide--note">на «Выручай-карту»</p>
+              <p class="account__main_round-slide--date">Дата: 15.08.2021</p>
+            </div>
+            <!-- слайды с призами -->
+            <div class="account__main_round-slide prize">
+              <div class="account__main_round-slide--img">
+                <img src="./dist/img/t-shirt.png" alt="img">
+              </div>
+              <p class="account__main_round-slide--title">модная футболка</p>
+              <p class="account__main_round-slide--note"><span>от Dirol x Maggi</span> <a href="https://www.instagram.com/maggigad/?hl=ru">@maggigad</a></p>
+              <p class="account__main_round-slide--date">Дата: 15.08.2021</p>
+              <a href="#" class="btn account__main_round-slide--btn">Получить</a>
+            </div>
+            <div class="account__main_round-slide prize">
+              <div class="account__main_round-slide--img">
+                <img src="./dist/img/bag.png" alt="img">
+              </div>
+              <p class="account__main_round-slide--title">модная сумка</p>
+              <p class="account__main_round-slide--note"><span>от Dirol x Maggi</span> <a href="https://www.instagram.com/maggigad/?hl=ru">@maggigad</a></p>
+              <p class="account__main_round-slide--date">Дата: 15.08.2021</p>
+              <a href="#" class="btn account__main_round-slide--btn">Получить</a>
+            </div>
+            <div class="account__main_round-slide prize">
+              <div class="account__main_round-slide--img">
+                <img src="./dist/img/sneakers.png" alt="img">
+              </div>
+              <p class="account__main_round-slide--title">эксклюзивные кроссовки</p>
+              <p class="account__main_round-slide--note">
+                <span>от Dirol x Shane Gonzales</span>
+                <a href="https://www.instagram.com/shaneaveli/"> @shaneaveli</a>
+                <span> x Maggi</span>
+                <a href="https://www.instagram.com/maggigad/?hl=ru">@maggigad</a>
+              </p>
+              <p class="account__main_round-slide--date">Дата: 15.08.2021</p>
+              <a href="#" class="btn account__main_round-slide--btn">Получить</a>
+            </div>
+
+          </div>
+
         </div>
       </div>
     </div>

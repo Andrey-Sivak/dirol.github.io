@@ -1,0 +1,9 @@
+<svg fill="none">
+<path d="M0 185L191 96.695L25.4389 0L0 185Z" fill="url(#paint0_linear)"/>
+<defs>
+<linearGradient id="paint0_linear" x1="119.685" y1="-6.875" x2="81.109" y2="165.525" gradientUnits="userSpaceOnUse">
+<stop offset="0.0947848" stop-color="#00E245"/>
+<stop offset="0.81093" stop-color="#00E245" stop-opacity="0.05"/>
+</linearGradient>
+</defs>
+</svg>
