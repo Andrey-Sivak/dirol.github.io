@@ -172,11 +172,14 @@
         }
 
         &.date {
-          position: absolute;
-          top: 0;
-          left: 0;
           font-size: 12px;
           font-weight: 400;
+
+          @include response-to(small) {
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
         }
       }
     }
