@@ -258,7 +258,7 @@
                 <a target="_blank" href="https://www.instagram.com/maggigad/?hl=ru">@maggigad</a>
               </p>
               <p class="account__main_round-slide--date">Дата: 15.08.2021</p>
-              <a href="#" class="btn account__main_round-slide--btn">Получить</a>
+              <a href="#" class="btn account__main_round-slide--btn" data-popup="get-present">Получить</a>
             </div>
 
           </div>
@@ -353,58 +353,74 @@
         </div>
 
         <div class="popup-form-field">
-          <select name="region" class="select-search select2-hidden-accessible form-control">
-            <option></option>
-            <option>Регион</option>
-            <option>Регион1</option>
-            <option>Регион2</option>
-            <option>Регион4</option>
-            <option>Регион5</option>
-            <option>Регион6</option>
-            <option>Регион7</option>
-            <option>Регион8</option>
-          </select>
+          <div class="select">
+            <select name="region"
+                    class="sl select-search select2-hidden-accessible"
+                    data-placeholder="Регион">
+              <option></option>
+              <option>Регион</option>
+              <option>Регион1</option>
+              <option>Регион2</option>
+              <option>Регион4</option>
+              <option>Регион5</option>
+              <option>Регион6</option>
+              <option>Регион7</option>
+              <option>Регион8</option>
+            </select>
+          </div>
           <p>Регион</p>
         </div>
         <div class="popup-form-field">
-          <select name="city" class="select-search select2-hidden-accessible form-control">
-            <option></option>
-            <option>Город1</option>
-            <option>Город3</option>
-            <option>Город3</option>
-            <option>Город3</option>
-            <option>Город5</option>
-            <option>Город6</option>
-            <option>Город7</option>
-            <option>Город8</option>
-          </select>
+          <div class="select">
+            <select name="city"
+                    class="sl select-search select2-hidden-accessible"
+                    data-placeholder="Город">
+              <option></option>
+              <option>Город1</option>
+              <option>Город3</option>
+              <option>Город3</option>
+              <option>Город3</option>
+              <option>Город5</option>
+              <option>Город6</option>
+              <option>Город7</option>
+              <option>Город8</option>
+            </select>
+          </div>
           <p>Город</p>
         </div>
         <div class="popup-form-field">
-          <select name="street" class="select-search select2-hidden-accessible form-control">
-            <option></option>
-            <option>Улиц2</option>
-            <option>Улица</option>
-            <option>Улица4</option>
-            <option>Улица</option>
-            <option>Улица</option>
-            <option>Улица</option>
-            <option>Улица</option>
-          </select>
+          <div class="select">
+            <select name="street"
+                    class="sl select-search select2-hidden-accessible"
+                    data-placeholder="Улица">
+              <option></option>
+              <option>Улиц2</option>
+              <option>Улица</option>
+              <option>Улица4</option>
+              <option>Улица</option>
+              <option>Улица</option>
+              <option>Улица</option>
+              <option>Улица</option>
+            </select>
+          </div>
           <p>Улица</p>
         </div>
 
         <div class="popup-form-field half">
-          <select name="house" class="select-search select2-hidden-accessible form-control">
-            <option></option>
-            <option>Дом</option>
-            <option>Дом2</option>
-            <option>Дом4</option>
-            <option>Дом</option>
-            <option>Дом3</option>
-            <option>Дом</option>
-            <option>Дом4</option>
-          </select>
+          <div class="select">
+            <select name="house"
+                    class="sl select-search select2-hidden-accessible"
+                    data-placeholder="Дом">
+              <option></option>
+              <option>Дом</option>
+              <option>Дом2</option>
+              <option>Дом4</option>
+              <option>Дом</option>
+              <option>Дом3</option>
+              <option>Дом</option>
+              <option>Дом4</option>
+            </select>
+          </div>
           <p>Дом</p>
         </div>
         <div class="popup-form-field half">
@@ -415,6 +431,53 @@
         <div class="popup-error">Ошибка</div>
         <button class="register-btn popup-btn btn" data-popup="get-present-2">ДАЛЕЕ</button>
       </form>
+    </div>
+  </div>
+</div>
+
+<div class="popup" data-modal="get-present-2" data-close="true">
+  <div class="popup-wrapper">
+    <a href="" class="close-popup" data-close="true"></a>
+    <div class="popup-inner">
+      <div class="popup-title">получить приз</div>
+      <p class="popup-subtitle">Выберите свой размер обуви</p>
+      <form action="" class="popup-form">
+        <div class="popup-form-field">
+          <div class="select">
+            <select name="size"
+                    class="sl popup-form-field_select"
+                    data-placeholder="Размер RUS">
+              <option></option>
+              <option>35 RUS</option>
+              <option>36 RUS</option>
+              <option>36 RUS</option>
+              <option>36 RUS</option>
+              <option>36 RUS</option>
+              <option>36 RUS</option>
+              <option>36 RUS</option>
+              <option>37 RUS</option>
+              <option>38 RUS</option>
+            </select>
+          </div>
+        </div>
+        <button class="register-btn popup-btn btn" data-popup="get-present-3">ДАЛЕЕ</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="popup" data-modal="get-present-3" data-close="true">
+  <div class="popup-wrapper">
+    <a href="" class="close-popup" data-close="true"></a>
+    <div class="popup-inner">
+      <div class="popup-title">Спасибо!</div>
+      <p class="popup-subtitle">Ваш приз будет отправлен по адресу:</p>
+      <p class="popup-address">123456, Свердловская область,г. Карпинск, ул. Макарова. д. 18, к. 2 кв. 2</p>
+      <p class="popup-current-size">Ваш размер: <span>42</span></p>
+      <form action="" class="popup-form">
+        <button class="register-btn popup-btn btn" data-close="true">ПОДТВЕРДИТЬ</button>
+      </form>
+      <p class="popup-back" data-popup="get-present-2">Назад</p>
     </div>
   </div>
 </div>

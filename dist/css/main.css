@@ -1849,7 +1849,8 @@ body {
   margin-right: 7px; }
 
 .register-btn {
-  margin-bottom: 17px; }
+  margin-bottom: 17px;
+  margin-top: 37px; }
 
 .autorization-btn {
   font-size: 12px;
@@ -1859,7 +1860,8 @@ body {
   color: #fff;
   opacity: 0.7;
   text-decoration: underline;
-  cursor: pointer; }
+  cursor: pointer;
+  width: 100%; }
 
 .close-popup {
   position: absolute;
@@ -1885,7 +1887,8 @@ body {
   color: #fff;
   opacity: 0.7;
   margin-bottom: 13px;
-  text-decoration: underline; }
+  text-decoration: underline;
+  width: 100%; }
 
 .register-text-btn {
   text-align: center;
@@ -1893,8 +1896,8 @@ body {
   font-weight: 400;
   color: #fff;
   opacity: 0.7;
-  max-width: 202px;
-  margin-top: 13px; }
+  width: 85%;
+  margin: 13px auto 0; }
 
 .register-text-btn a {
   font-weight: 700; }

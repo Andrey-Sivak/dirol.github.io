@@ -516,6 +516,7 @@
 
 .register-btn {
   margin-bottom: 17px;
+  margin-top: 37px;
 }
 
 .autorization-btn {
@@ -527,6 +528,7 @@
   opacity: 0.7;
   text-decoration: underline;
   cursor: pointer;
+  width: 100%;
 }
 
 .close-popup {
@@ -556,6 +558,7 @@
   opacity: 0.7;
   margin-bottom: 13px;
   text-decoration: underline;
+  width: 100%;
 }
 
 .register-text-btn {
@@ -564,8 +567,8 @@
   font-weight: 400;
   color: #fff;
   opacity: 0.7;
-  max-width: 202px;
-  margin-top: 13px;
+  width: 85%;
+  margin: 13px auto 0;
 }
 
 .register-text-btn a {
