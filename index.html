@@ -46,7 +46,7 @@
             </div>
           </div>
         </nav>
-        <a href="#" class="header-sign-in pop-op" data-popup="sign-up">
+        <a href="#" class="header-sign-in pop-op" data-popup="register">
           <img src="./dist/img/human-icon.png" alt="img" />
           <svg class="mob" width="24" height="31" viewBox="0 0 24 31" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0.666626 30.1667C0.666626 27.1609 1.86067 24.2782 3.98608 22.1528C6.11149 20.0274 8.99417 18.8333 12 18.8333C15.0057 18.8333 17.8884 20.0274 20.0138 22.1528C22.1392 24.2782 23.3333 27.1609 23.3333 30.1667H0.666626ZM12 17.4167C7.30371 17.4167 3.49996 13.6129 3.49996 8.91666C3.49996 4.22041 7.30371 0.416656 12 0.416656C16.6962 0.416656 20.5 4.22041 20.5 8.91666C20.5 13.6129 16.6962 17.4167 12 17.4167Z" fill="white"/>
@@ -294,56 +294,16 @@
     <div class="footer-white-bg"></div>
   </div>
 </footer>
-<div class="popups">
-  <div class="popup" id="sign-up">
+
+
+  <div class="popup" data-modal="register" data-close="true">
     <div class="popup-wrapper">
-      <a href="" class="close-popup js-close-popup">
-        <svg
-                width="33"
-                height="33"
-                viewBox="0 0 33 33"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle cx="16.5" cy="16.5" r="16.5" fill="url(#paint0_linear)" />
-          <path
-                  d="M22.7333 11L11 22.7333"
-                  stroke="white"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-          />
-          <path
-                  d="M11 11L22.7333 22.7333"
-                  stroke="white"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-          />
-          <defs>
-            <linearGradient
-                    id="paint0_linear"
-                    x1="24.3346"
-                    y1="-0.547267"
-                    x2="7.25896"
-                    y2="38.1067"
-                    gradientUnits="userSpaceOnUse"
-            >
-              <stop stop-color="#00E245" />
-              <stop
-                      offset="0.81093"
-                      stop-color="#00E245"
-                      stop-opacity="0.05"
-              />
-            </linearGradient>
-          </defs>
-        </svg>
-      </a>
+      <a href="" class="close-popup" data-close="true"></a>
       <div class="popup-inner">
         <div class="popup-title">Регистрация</div>
         <form action="" class="popup-form">
           <div class="popup-form-field">
-            <input type="text" name="name" />
+            <input type="text" name="fio" />
             <p>ФИО</p>
           </div>
           <div class="popup-form-field">
@@ -354,35 +314,33 @@
             <input type="text" name="email" />
             <p>E-mail</p>
           </div>
-          <div class="popup-form-agree">
-            <div class="popup-form-agree-item">
-              <div class="agree-item-checkbox"></div>
-              <div class="popup-form-agree-text">
-                Я согласен с Правилами акции
-              </div>
-            </div>
-            <div class="popup-form-agree-item">
-              <div class="agree-item-checkbox"></div>
-              <div class="popup-form-agree-text">
-                Я даю свое согласие на обработку моих персональных данных в
-                соответствиис Правилами акции и Положением об организации
-                обработки ПДнв ООО «Мон’дэлис Русь».
-              </div>
-            </div>
-            <div class="popup-form-agree-item">
-              <div class="agree-item-checkbox"></div>
-              <div class="popup-form-agree-text">
-                Я согласен получать рассылки по акциям Mondelez
-              </div>
-            </div>
+          <div class="popup-form-field checkbox">
+            <label for="checkbox1" class="popup-form-checkbox">
+              <input type="checkbox" name="checkbox1" id="checkbox1" class="popup-form-checkbox-input">
+              <span class="popup-form-checkbox-label">Я согласен с Правилами акции</span>
+            </label>
+          </div>
+          <div class="popup-form-field checkbox">
+            <label for="checkbox2" class="popup-form-checkbox">
+              <input type="checkbox" name="checkbox2" id="checkbox2" class="popup-form-checkbox-input">
+              <span class="popup-form-checkbox-label">Я даю свое согласие на обработку моих персональных данных в соответствиис Правилами акции и Положением об организации обработки ПДнв ООО «Мон’дэлис Русь».</span>
+            </label>
+          </div>
+          <div class="popup-form-field checkbox">
+            <label for="checkbox3" class="popup-form-checkbox">
+              <input type="checkbox" name="checkbox3" id="checkbox3" class="popup-form-checkbox-input">
+              <span class="popup-form-checkbox-label">Я согласен получать рассылки по акциям Mondelez</span>
+            </label>
           </div>
           <div class="popup-error">Ошибка</div>
-          <div class="register-btn popup-btn">Зарегистрироваться</div>
-          <a href="#" class="autorization-btn pop-op" data-popup="sign-in"
+          <button class="register-btn popup-btn btn">Зарегистрироваться</button>
+          <a href="#" class="autorization-btn pop-op" data-popup="auth"
           >Авторизация</a
           >
         </form>
-        <div class="popup-form-done">
+
+
+        <!--<div class="popup-form-done">
           <div class="popup-form-done-text">
             Пароль для входа на сайт отправлен на e-mail, указанный при
             регистрации.
@@ -390,54 +348,14 @@
           <a href="" class="popup-form-done-btn js-close-popup popup-btn"
           >Закрыть</a
           >
-        </div>
+        </div>-->
       </div>
     </div>
   </div>
-  <div class="popup" id="sign-in">
+
+  <div class="popup" data-modal="auth" data-close="true">
     <div class="popup-wrapper">
-      <a href="" class="close-popup js-close-popup">
-        <svg
-                width="33"
-                height="33"
-                viewBox="0 0 33 33"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle cx="16.5" cy="16.5" r="16.5" fill="url(#paint0_linear)" />
-          <path
-                  d="M22.7333 11L11 22.7333"
-                  stroke="white"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-          />
-          <path
-                  d="M11 11L22.7333 22.7333"
-                  stroke="white"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-          />
-          <defs>
-            <linearGradient
-                    id="paint0_linear"
-                    x1="24.3346"
-                    y1="-0.547267"
-                    x2="7.25896"
-                    y2="38.1067"
-                    gradientUnits="userSpaceOnUse"
-            >
-              <stop stop-color="#00E245" />
-              <stop
-                      offset="0.81093"
-                      stop-color="#00E245"
-                      stop-opacity="0.05"
-              />
-            </linearGradient>
-          </defs>
-        </svg>
-      </a>
+      <a href="" class="close-popup" data-close="true"></a>
       <div class="popup-inner">
         <div class="popup-title">Авторизация</div>
         <form action="" class="popup-form">
@@ -450,18 +368,60 @@
             <p>Пароль</p>
           </div>
           <div class="popup-error">Ошибка</div>
-          <a href="" class="forgot-password">Забыли пароль?</a>
-          <div class="sign-in-btn popup-btn">Войти</div>
+          <a href="#" class="forgot-password" data-popup="forgot-pass">Забыли пароль?</a>
+          <button class="sign-in-btn popup-btn btn">Войти</button>
           <div class="register-text-btn">
             Если вы в первый раз на сайте —
-            <a href="#" class="pop-op" data-popup="sign-up"
-            >зарегистрируйтесь</a
-            >
+            <a href="#" class="pop-op" data-popup="register">зарегистрируйтесь</a>
           </div>
         </form>
       </div>
     </div>
   </div>
-</div>
+
+  <div class="popup" data-modal="forgot-pass" data-close="true">
+    <div class="popup-wrapper">
+      <a href="" class="close-popup" data-close="true"></a>
+      <div class="popup-inner">
+        <div class="popup-title">Email</div>
+        <form action="" class="popup-form">
+          <div class="popup-form-field">
+            <input type="text" name="email" />
+            <p>E-mail</p>
+          </div>
+          <div class="popup-error">Ошибка</div>
+          <a href="#" class="forgot-password" data-popup="forgot-pass">Войти</a>
+          <button class="sign-in-btn popup-btn btn">Отправить</button>
+          <div class="register-text-btn">
+            Если вы в первый раз на сайте —
+            <a href="#" class="pop-op" data-popup="register">зарегистрируйтесь</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="popup-form-agree">
+    <div class="popup-form-agree-item">
+      <div class="agree-item-checkbox"></div>
+      <div class="popup-form-agree-text">
+        Я согласен с Правилами акции
+      </div>
+    </div>
+    <div class="popup-form-agree-item">
+      <div class="agree-item-checkbox"></div>
+      <div class="popup-form-agree-text">
+        Я даю свое согласие на обработку моих персональных данных в
+        соответствиис Правилами акции и Положением об организации
+        обработки ПДнв ООО «Мон’дэлис Русь».
+      </div>
+    </div>
+    <div class="popup-form-agree-item">
+      <div class="agree-item-checkbox"></div>
+      <div class="popup-form-agree-text">
+        Я согласен получать рассылки по акциям Mondelez
+      </div>
+    </div>
+  </div>
 </body>
 </html>

@@ -330,172 +330,91 @@
     <div class="footer-white-bg"></div>
   </div>
 </footer>
-<div class="popups">
-  <div class="popup" id="sign-up">
-    <div class="popup-wrapper">
-      <a href="" class="close-popup js-close-popup">
-        <svg
-                width="33"
-                height="33"
-                viewBox="0 0 33 33"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle cx="16.5" cy="16.5" r="16.5" fill="url(#paint0_linear)" />
-          <path
-                  d="M22.7333 11L11 22.7333"
-                  stroke="white"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-          />
-          <path
-                  d="M11 11L22.7333 22.7333"
-                  stroke="white"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-          />
-          <defs>
-            <linearGradient
-                    id="paint0_linear"
-                    x1="24.3346"
-                    y1="-0.547267"
-                    x2="7.25896"
-                    y2="38.1067"
-                    gradientUnits="userSpaceOnUse"
-            >
-              <stop stop-color="#00E245" />
-              <stop
-                      offset="0.81093"
-                      stop-color="#00E245"
-                      stop-opacity="0.05"
-              />
-            </linearGradient>
-          </defs>
-        </svg>
-      </a>
-      <div class="popup-inner">
-        <div class="popup-title">Регистрация</div>
-        <form action="" class="popup-form">
-          <div class="popup-form-field">
-            <input type="text" name="name" />
-            <p>ФИО</p>
-          </div>
-          <div class="popup-form-field">
-            <input type="text" name="phone" class="phone-mask" />
-            <p>Номер телефон</p>
-          </div>
-          <div class="popup-form-field">
-            <input type="text" name="email" />
-            <p>E-mail</p>
-          </div>
-          <div class="popup-form-agree">
-            <div class="popup-form-agree-item">
-              <div class="agree-item-checkbox"></div>
-              <div class="popup-form-agree-text">
-                Я согласен с Правилами акции
-              </div>
-            </div>
-            <div class="popup-form-agree-item">
-              <div class="agree-item-checkbox"></div>
-              <div class="popup-form-agree-text">
-                Я даю свое согласие на обработку моих персональных данных в
-                соответствиис Правилами акции и Положением об организации
-                обработки ПДнв ООО «Мон’дэлис Русь».
-              </div>
-            </div>
-            <div class="popup-form-agree-item">
-              <div class="agree-item-checkbox"></div>
-              <div class="popup-form-agree-text">
-                Я согласен получать рассылки по акциям Mondelez
-              </div>
-            </div>
-          </div>
-          <div class="popup-error">Ошибка</div>
-          <div class="register-btn popup-btn">Зарегистрироваться</div>
-          <a href="#" class="autorization-btn pop-op" data-popup="sign-in"
-          >Авторизация</a
-          >
-        </form>
-        <div class="popup-form-done">
-          <div class="popup-form-done-text">
-            Пароль для входа на сайт отправлен на e-mail, указанный при
-            регистрации.
-          </div>
-          <a href="" class="popup-form-done-btn js-close-popup popup-btn"
-          >Закрыть</a
-          >
+<div class="popup" data-modal="get-present" data-close="true">
+  <div class="popup-wrapper">
+    <a href="" class="close-popup" data-close="true"></a>
+    <div class="popup-inner">
+      <div class="popup-title">получить приз</div>
+      <p class="popup-subtitle">Оставьте ваш адрес для получения приза</p>
+      <p class="popup-note">Для получения приза ожидайте запрос документов на электронную почту, указанную при регистрации на сайте. Перечень документов указан в п.Х правил акции. Либо можете прислать их самостоятельно на почту
+        <a href="mailto:x5@diroldontdrop.ru">x5@diroldontdrop.ru</a></p>
+      <form action="" class="popup-form">
+        <div class="popup-form-field">
+          <input type="text" name="FName" />
+          <p>Фамилия</p>
         </div>
-      </div>
-    </div>
-  </div>
-  <div class="popup" id="sign-in">
-    <div class="popup-wrapper">
-      <a href="" class="close-popup js-close-popup">
-        <svg
-                width="33"
-                height="33"
-                viewBox="0 0 33 33"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle cx="16.5" cy="16.5" r="16.5" fill="url(#paint0_linear)" />
-          <path
-                  d="M22.7333 11L11 22.7333"
-                  stroke="white"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-          />
-          <path
-                  d="M11 11L22.7333 22.7333"
-                  stroke="white"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-          />
-          <defs>
-            <linearGradient
-                    id="paint0_linear"
-                    x1="24.3346"
-                    y1="-0.547267"
-                    x2="7.25896"
-                    y2="38.1067"
-                    gradientUnits="userSpaceOnUse"
-            >
-              <stop stop-color="#00E245" />
-              <stop
-                      offset="0.81093"
-                      stop-color="#00E245"
-                      stop-opacity="0.05"
-              />
-            </linearGradient>
-          </defs>
-        </svg>
-      </a>
-      <div class="popup-inner">
-        <div class="popup-title">Авторизация</div>
-        <form action="" class="popup-form">
-          <div class="popup-form-field">
-            <input type="text" name="email" />
-            <p>E-mail</p>
-          </div>
-          <div class="popup-form-field">
-            <input type="password" name="password" />
-            <p>Пароль</p>
-          </div>
-          <div class="popup-error">Ошибка</div>
-          <a href="" class="forgot-password">Забыли пароль?</a>
-          <div class="sign-in-btn popup-btn">Войти</div>
-          <div class="register-text-btn">
-            Если вы в первый раз на сайте —
-            <a href="#" class="pop-op" data-popup="sign-up"
-            >зарегистрируйтесь</a
-            >
-          </div>
-        </form>
-      </div>
+        <div class="popup-form-field">
+          <input type="text" name="SName" />
+          <p>Имя</p>
+        </div>
+        <div class="popup-form-field">
+          <input type="text" name="phone" class="phone-mask" />
+          <p>Мобильный телефон</p>
+        </div>
+
+        <div class="popup-form-field">
+          <select name="region" class="select-search select2-hidden-accessible form-control">
+            <option></option>
+            <option>Регион</option>
+            <option>Регион1</option>
+            <option>Регион2</option>
+            <option>Регион4</option>
+            <option>Регион5</option>
+            <option>Регион6</option>
+            <option>Регион7</option>
+            <option>Регион8</option>
+          </select>
+          <p>Регион</p>
+        </div>
+        <div class="popup-form-field">
+          <select name="city" class="select-search select2-hidden-accessible form-control">
+            <option></option>
+            <option>Город1</option>
+            <option>Город3</option>
+            <option>Город3</option>
+            <option>Город3</option>
+            <option>Город5</option>
+            <option>Город6</option>
+            <option>Город7</option>
+            <option>Город8</option>
+          </select>
+          <p>Город</p>
+        </div>
+        <div class="popup-form-field">
+          <select name="street" class="select-search select2-hidden-accessible form-control">
+            <option></option>
+            <option>Улиц2</option>
+            <option>Улица</option>
+            <option>Улица4</option>
+            <option>Улица</option>
+            <option>Улица</option>
+            <option>Улица</option>
+            <option>Улица</option>
+          </select>
+          <p>Улица</p>
+        </div>
+
+        <div class="popup-form-field half">
+          <select name="house" class="select-search select2-hidden-accessible form-control">
+            <option></option>
+            <option>Дом</option>
+            <option>Дом2</option>
+            <option>Дом4</option>
+            <option>Дом</option>
+            <option>Дом3</option>
+            <option>Дом</option>
+            <option>Дом4</option>
+          </select>
+          <p>Дом</p>
+        </div>
+        <div class="popup-form-field half">
+          <input type="text" name="flat" />
+          <p>Квартира</p>
+        </div>
+
+        <div class="popup-error">Ошибка</div>
+        <button class="register-btn popup-btn btn" data-popup="get-present-2">ДАЛЕЕ</button>
+      </form>
     </div>
   </div>
 </div>

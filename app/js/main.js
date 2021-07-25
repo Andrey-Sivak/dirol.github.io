@@ -3,34 +3,10 @@ import * as $ from 'jquery';
 import './jquery.validate.min.js';
 import './jquery.inputmask.min';
 import './slick.min';
+import './select2.min';
 
 window.addEventListener('load', function () {
 
-    function OpenPopup(popupId) {
-        $("body").removeClass("no-scrolling");
-        $(".popup").removeClass("js-popup-show");
-        popupId = "#" + popupId;
-        $(popupId).addClass("js-popup-show");
-        $("body").addClass("no-scrolling");
-    }
-    $(".pop-op").click(function (e) {
-        e.preventDefault();
-        let data = $(this).data("popup");
-        OpenPopup(data);
-    });
-    function closePopup() {
-        $(".js-close-popup").on("click", function (e) {
-            e.preventDefault();
-            $(".popup").removeClass("js-popup-show");
-            $("body").removeClass("no-scrolling");
-        });
-    }
-    closePopup();
-    function clickClosePopup(popupId) {
-        popupId = "#" + popupId;
-        $(popupId).removeClass("js-popup-show");
-        $("body").removeClass("no-scrolling");
-    }
     function maskInit() {
         $(".phone-mask").inputmask({
             mask: "+7(999)999-99-99",
@@ -39,91 +15,7 @@ window.addEventListener('load', function () {
     }
     maskInit();
 
-    $(".popup-form-agree-item").click(function () {
-        if ($(this).hasClass("active")) {
-            $(this).removeClass("active");
-        } else {
-            $(this).addClass("active");
-        }
-    });
-
-    $(".register-btn").click(function () {
-        let fieldsFlag = false;
-        let agreeFlag = true;
-        let name = $(this).parents(".popup-form").find("[name=name]").val();
-        let phone = $(this).parents(".popup-form").find("[name=phone]").val();
-        let email = $(this).parents(".popup-form").find("[name=email]").val();
-        if (name.trim() != "" && phone.trim() != "" && email.trim() != "") {
-            $(".popup-error").removeClass("active");
-            fieldsFlag = true;
-        } else {
-            $(".popup-error").addClass("active");
-            if (name.trim() == "" && phone.trim() != "" && email.trim() != "") {
-                $(".popup-error").text("Заполните имя");
-            }
-            if (name.trim() != "" && phone.trim() == "" && email.trim() != "") {
-                $(".popup-error").text("Заполните телефон");
-            }
-            if (name.trim() != "" && phone.trim() != "" && email.trim() == "") {
-                $(".popup-error").text("Заполните почту");
-            }
-            if (name.trim() == "" && phone.trim() == "" && email.trim() != "") {
-                $(".popup-error").text("Заполните имя и телефон");
-            }
-            if (name.trim() == "" && phone.trim() != "" && email.trim() == "") {
-                $(".popup-error").text("Заполните имя и почту");
-            }
-            if (name.trim() != "" && phone.trim() == "" && email.trim() == "") {
-                $(".popup-error").text("Заполните почту и телефон");
-            }
-            if (name.trim() == "" && phone.trim() == "" && email.trim() == "") {
-                $(".popup-error").text("Заполните имя, почту и телефон");
-            }
-        }
-        for (
-            let i = 0;
-            i < $(this).parents(".popup-form").find(".popup-form-agree-item").length;
-            i++
-        ) {
-            if (
-                !$(this)
-                    .parents(".popup-form")
-                    .find(".popup-form-agree-item")
-                    .eq(i)
-                    .hasClass("active")
-            ) {
-                agreeFlag = false;
-            }
-        }
-        if (fieldsFlag && agreeFlag) {
-            $(this)
-                .parents(".popup-inner")
-                .find(".popup-title")
-                .text("Регистрация пройдена");
-            $(this).parents(".popup-inner").find(".popup-form").addClass("disnone");
-            $(this)
-                .parents(".popup-inner")
-                .find(".popup-form-done")
-                .addClass("active");
-        }
-    });
-
-    $(".sign-in-btn").click(function () {
-        let email = $(this).parents(".popup-form").find("[name=email]").val();
-        let password = $(this).parents(".popup-form").find("[name=password]").val();
-        if (email.trim() == "123@gmail.com" && password.trim() == "1234") {
-            $(".popup-error").removeClass("active");
-            $(this).parents(".popup").removeClass("js-popup-show");
-            $(this)
-                .parents(".popup-form")
-                .find(".popup-form-field")
-                .removeClass("red");
-        } else {
-            $(".popup-error").addClass("active");
-            $(".popup-error").text("Неверный логин или пароль");
-            $(this).parents(".popup-form").find(".popup-form-field").addClass("red");
-        }
-    });
+    $('.select2-hidden-accessible').select2();
 
     (function mobMenu() {
         if(!document.querySelector('.header-nav')) {
@@ -232,5 +124,130 @@ window.addEventListener('load', function () {
                 }, 300);
             })
         })
+    })();
+
+    (function modal() {
+        if (!document.querySelector('.popup')) {
+            return;
+        }
+
+        const activeClass = 'js-popup-show';
+
+        const modalBtns = [...document.querySelectorAll('[data-popup]')];
+
+        modalBtns.forEach(m => {
+           m.addEventListener('click', function (e) {
+               e.preventDefault();
+
+               const modalName = this.dataset.popup;
+
+               if (document.querySelector(`.popup.${activeClass}`)) {
+                   document.querySelector(`.popup.${activeClass}`)
+                       .classList.remove(activeClass);
+               }
+
+               const currentModal = document.querySelector(`[data-modal="${modalName}"]`);
+
+               currentModal.classList.add(activeClass);
+               document.body.classList.add('no-scrolling');
+               currentModal.addEventListener('click', function (e) {
+                   if (e.target.dataset.close) {
+                       e.preventDefault();
+                       modalClose(currentModal);
+                   }
+               })
+
+
+           })
+        });
+
+        function modalClose(modal) {
+           modal.classList.remove(activeClass);
+            document.body.classList.remove('no-scrolling');
+        }
+
+    })();
+
+    (function checkValidate() {
+        const form = $('form');
+
+        $.each(form, function () {
+            $(this).validate({
+                ignore: [],
+                errorClass: 'error',
+                validClass: 'success',
+                rules: {
+                    fio: {
+                        required: true
+                    },
+                    FName: {
+                        required: true
+                    },
+                    SName: {
+                        required: true
+                    },
+                    phone: {
+                        required: true,
+                        // PhoneNumber: true
+                    },
+                    email: {
+                        required: true,
+                        // Email: true
+                    },
+                    checkbox1: {
+                        required: true
+                    },
+                    checkbox2: {
+                        required: true
+                    },
+                    checkbox3: {
+                        required: true
+                    },
+                    region: {
+                        required: true
+                    },
+                    city: {
+                        required: true
+                    },
+                    street: {
+                        required: true
+                    },
+                    house: {
+                        required: true
+                    },
+                    flat: {
+                        required: true
+                    },
+                    size: {
+                        required: true
+                    },
+                    password: {
+                        required: true,
+                        normalizer: function normalizer(value) {
+                            return $.trim(value);
+                        }
+                    }
+                },
+                errorElement: 'span',
+                errorPlacement: function (error, element) {
+                    var placement = $(element).data('error');
+                    if (placement) {
+                        $(placement).append(error);
+                    } else {
+                        error.insertBefore(element);
+                    }
+                },
+                messages: {
+                    PhoneNumber: 'Некорректный номер',
+                    Email: 'Некорректный e-mail'
+                }
+            });
+        });
+        $.validator.addMethod('Email', function (value, element) {
+            return this.optional(element) || /\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,6}/.test(value);
+        });
+        $.validator.addMethod('PhoneNumber', function (value, element) {
+            return this.optional(element) || /\+7\(\d+\)\d{3}-\d{2}-\d{2}/.test(value);
+        });
     })();
 });
