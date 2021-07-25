@@ -248,11 +248,9 @@
                 <a target="_blank" href="https://www.instagram.com/maggigad/?hl=ru">@maggigad</a>
               </p>
               <p class="account__main_round-slide--date">Дата: 15.08.2021</p>
-              <a href="#" class="btn account__main_round-slide--btn" data-popup="get-present">Получить</a>
+              <a href="#" class="btn account__main_round-slide--btn">Получить</a>
             </div>
-
           </div>
-
         </div>
       </div>
     </div>
@@ -536,16 +534,47 @@
       <p class="popup-subtitle">Выберите свой размер футболки</p>
       <form action="" class="popup-form">
         <div class="popup-form-field">
-          <select name="size" class="popup-form-field_select">
-            <option>S</option>
-            <option>M</option>
-            <option>L</option>
-            <option>XL</option>
-          </select>
-          <p>Размер</p>
+          <div class="select">
+            <select name="size"
+                    class="sl popup-form-field_select"
+                    data-placeholder="Размер">
+              <option></option>
+              <option>S</option>
+              <option>M</option>
+              <option>L</option>
+              <option>XL</option>
+            </select>
+          </div>
+        </div>
+        <p class="size-table_title">Таблица размеров</p>
+        <div class="size-table">
+          <div class="size-table__row">
+            <div class="sz"></div>
+            <div class="breast">Обхват груди</div>
+            <div class="waist">Обхват талии</div>
+          </div>
+          <div class="size-table__row">
+            <div class="sz">S</div>
+            <div class="breast">ххх-ххх мм</div>
+            <div class="waist">ххх-ххх мм</div>
+          </div>
+          <div class="size-table__row">
+            <div class="sz">M</div>
+            <div class="breast">ххх-ххх мм</div>
+            <div class="waist">ххх-ххх мм</div>
+          </div>
+          <div class="size-table__row">
+            <div class="sz">L</div>
+            <div class="breast">ххх-ххх мм</div>
+            <div class="waist">ххх-ххх мм</div>
+          </div>
+          <div class="size-table__row">
+            <div class="sz">Xl</div>
+            <div class="breast">ххх-ххх мм</div>
+            <div class="waist">ххх-ххх мм</div>
+          </div>
         </div>
 
-        <div class="popup-error">Ошибка</div>
         <button class="register-btn popup-btn btn" data-popup="get-present-3">ДАЛЕЕ</button>
       </form>
     </div>
@@ -558,9 +587,12 @@
     <div class="popup-inner">
       <div class="popup-title">Спасибо!</div>
       <p class="popup-subtitle">Ваш приз будет отправлен по адресу:</p>
+      <p class="popup-address">123456, Свердловская область,г. Карпинск, ул. Макарова. д. 18, к. 2 кв. 2</p>
+      <p class="popup-current-size">Ваш размер: <span>M</span></p>
       <form action="" class="popup-form">
         <button class="register-btn popup-btn btn" data-close="true">ПОДТВЕРДИТЬ</button>
       </form>
+      <p class="popup-back" data-popup="get-present-2">Назад</p>
     </div>
   </div>
 </div>

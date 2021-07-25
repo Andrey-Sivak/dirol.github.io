@@ -15,8 +15,6 @@ window.addEventListener('load', function () {
     }
     maskInit();
 
-    // $('.select2-hidden-accessible').select2();
-
     (function mobMenu() {
         if(!document.querySelector('.header-nav')) {
             return;

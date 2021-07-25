@@ -26,6 +26,10 @@
     padding-top: 31px;
     padding-bottom: 33px;
     margin-bottom: 1350px;
+
+    @include response-to(small) {
+      max-width: 320px;
+    }
   }
 
   &-form {
@@ -35,6 +39,10 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+
+    @include response-to(small) {
+      width: 90%;
+    }
 
     &-checkbox {
       position: relative;
@@ -127,6 +135,11 @@
           margin-bottom: 6px;
           display: block;
           height: 62px;
+
+          @include response-to(small) {
+            height: 45px;
+            padding-top: 7px;
+          }
         }
 
         & .select2-container {
@@ -193,6 +206,13 @@
           right: 7px;
           top: 6px;
 
+          @include response-to(small) {
+            width: 36px;
+            height: 36px;
+            right: 5px;
+            top: 4px;
+          }
+
           &:before {
             position: absolute;
             content: '';
@@ -242,6 +262,10 @@
         font-size: 20px;
         font-weight: 300;
         font-style: italic;
+
+        @include response-to(small) {
+          height: 45px;
+        }
       }
 
       &.red input {
@@ -327,6 +351,10 @@
     text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.25);
     text-transform: uppercase;
     cursor: pointer;
+
+    @include response-to(small) {
+      font-size: 16px;
+    }
   }
 
   &.disnone {
@@ -334,6 +362,7 @@
   }
 
   &-title {
+    font-family: Body-Grotesque;
     font-size: 30px;
     line-height: calc(37 / 30);
     font-weight: 800;
@@ -342,6 +371,10 @@
     text-transform: uppercase;
     margin: 0 auto 25px;
     max-width: calc(100% - 60px);
+
+    @include response-to(small) {
+      font-size: 25px;
+    }
   }
 
   &-subtitle {
@@ -352,6 +385,10 @@
     letter-spacing: -0.02em;
     color: #fff;
     margin: -10px auto 31px;
+
+    @include response-to(small) {
+      font-size: 14px;
+    }
   }
 
   &-note {
@@ -380,6 +417,82 @@
     &.active {
       visibility: visible;
     }
+  }
+
+  & .size-table {
+    width: 100%;
+    border: 1px solid #C2C2C2;
+    margin-bottom: 40px;
+
+    &_title {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 15px;
+      font-size: 12px;
+    }
+
+    &__row {
+      width: 100%;
+      display: flex;
+
+      &:not(:last-of-type) {
+        border-bottom: 1px dashed #C2C2C2;
+      }
+
+      & > div {
+        padding: 8px 0;
+        text-align: center;
+        flex: 1 1 auto;
+
+        @include response-to(small) {
+          font-size: 12px;
+        }
+
+        &.sz {
+          width: 54px;
+          flex-grow: 0;
+          border-right: 1px dashed #C2C2C2;
+        }
+
+        &.waist {
+          width: 150px;
+          flex-grow: 0;
+          border-left: 1px dashed #C2C2C2;
+
+          @include response-to(small) {
+            width: 116px;
+          }
+        }
+      }
+    }
+  }
+
+  &-address {
+    max-width: 258px;
+    font-size: 12px;
+    margin: 0 auto 15px;
+    text-align: center;
+  }
+
+  &-current-size {
+    font-size: 12px;
+    margin-bottom: 35px;
+    width: 100%;
+    text-align: center;
+
+    & span {
+      font-weight: bold;
+    }
+  }
+
+  &-back {
+    opacity: 0.7;
+    width: 100%;
+    text-align: center;
+    text-decoration-line: underline;
+    font-size: 12px;
+    margin-top: 15px;
+    cursor: pointer;
   }
 }
 
@@ -427,6 +540,11 @@
   display: block;
   right: 10px;
   top: 10px;
+
+  @include response-to(small) {
+    width: 25px;
+    height: 25px;
+  }
 }
 
 .forgot-password {
