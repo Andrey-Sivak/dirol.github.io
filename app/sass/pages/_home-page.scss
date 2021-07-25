@@ -279,7 +279,6 @@
   line-height: calc(37 / 30);
   color: #00e245;
   position: relative;
-  text-transform: uppercase;
 }
 
 .main-banner-bottom-item-green:before {
@@ -408,7 +407,6 @@
   text-align: center;
   margin-top: 25px;
   margin-bottom: 28px;
-  text-transform: uppercase;
 
   @include response-to(small) {
     margin-bottom: 27px;
@@ -453,7 +451,6 @@
   font-weight: 800;
   text-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
   color: #00e245;
-  text-transform: uppercase;
   margin-bottom: 15px;
 
   & span {

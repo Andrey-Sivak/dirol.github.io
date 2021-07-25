@@ -233,5 +233,4 @@ window.addEventListener('load', function () {
             })
         })
     })();
-
 });

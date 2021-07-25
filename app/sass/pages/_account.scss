@@ -317,7 +317,6 @@
 
       &-caption {
         position: absolute;
-        text-transform: uppercase;
         font-weight: 800;
         font-size: 30px;
         text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
@@ -409,7 +408,6 @@
           font-size: 32px;
           line-height: 26px;
           letter-spacing: -0.02em;
-          text-transform: uppercase;
           margin-bottom: 4px;
         }
 
@@ -473,14 +471,28 @@
           }
 
           &::-webkit-scrollbar-track {
-            background-color: #fff;
+            background-color: transparent;
             border-radius: 20px;
           }
 
           &::-webkit-scrollbar-thumb {
-            background-color: $green-color;
+            background-color: #fff;
             border-radius: 20px;
-            border: 2px solid #fff;
+            border: 2px solid transparent;
+          }
+
+          &-wrap {
+            position: relative;
+
+            &:before {
+              position: absolute;
+              content: '';
+              top: 0;
+              bottom: 0;
+              width: 2px;
+              background-color: #fff;
+              right: 4px;
+            }
           }
         }
 

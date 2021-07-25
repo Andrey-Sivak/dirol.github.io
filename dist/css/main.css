@@ -312,7 +312,6 @@ body {
   font-family: Body-Grotesque;
   font-weight: 800;
   text-align: center;
-  text-transform: uppercase;
   color: #fff;
   font-size: 50px; }
   @media (max-width: 767px) {
@@ -1374,8 +1373,7 @@ body {
   font-weight: 800;
   line-height: calc(37 / 30);
   color: #00e245;
-  position: relative;
-  text-transform: uppercase; }
+  position: relative; }
 
 .main-banner-bottom-item-green:before {
   content: "";
@@ -1482,8 +1480,7 @@ body {
   color: #fff;
   text-align: center;
   margin-top: 25px;
-  margin-bottom: 28px;
-  text-transform: uppercase; }
+  margin-bottom: 28px; }
   @media (max-width: 767px) {
     .main-prizes-title {
       margin-bottom: 27px;
@@ -1543,7 +1540,6 @@ body {
   font-weight: 800;
   text-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
   color: #00e245;
-  text-transform: uppercase;
   margin-bottom: 15px; }
   .main-prizes-item-title span {
     font-family: Body-Grotesque; }
@@ -1981,7 +1977,6 @@ body {
         width: 100%; }
       .account__main_round-caption {
         position: absolute;
-        text-transform: uppercase;
         font-weight: 800;
         font-size: 30px;
         text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
@@ -2059,7 +2054,6 @@ body {
           font-size: 32px;
           line-height: 26px;
           letter-spacing: -0.02em;
-          text-transform: uppercase;
           margin-bottom: 4px; }
         .account__main_round-slide--note {
           font-weight: 700;
@@ -2102,12 +2096,22 @@ body {
             width: 10px;
             padding: 2px; }
           .account__main_round-table--body::-webkit-scrollbar-track {
-            background-color: #fff;
+            background-color: transparent;
             border-radius: 20px; }
           .account__main_round-table--body::-webkit-scrollbar-thumb {
-            background-color: #00E245;
+            background-color: #fff;
             border-radius: 20px;
-            border: 2px solid #fff; }
+            border: 2px solid transparent; }
+          .account__main_round-table--body-wrap {
+            position: relative; }
+            .account__main_round-table--body-wrap:before {
+              position: absolute;
+              content: '';
+              top: 0;
+              bottom: 0;
+              width: 2px;
+              background-color: #fff;
+              right: 4px; }
         .account__main_round-table--row {
           display: -webkit-box;
           display: -webkit-flex;
@@ -2442,6 +2446,14 @@ body {
       -webkit-align-items: center;
           -ms-flex-align: center;
               align-items: center; }
+      @media (max-width: 767px) {
+        .winners__list.monthly .winners__list_table {
+          -webkit-flex-wrap: wrap;
+              -ms-flex-wrap: wrap;
+                  flex-wrap: wrap;
+          height: auto;
+          max-height: unset;
+          overflow: auto; } }
     .winners__list.monthly .winners__list_caption {
       color: #00E245;
       text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.9);
@@ -2451,12 +2463,20 @@ body {
       margin-bottom: 50px;
       text-align: center;
       text-transform: uppercase; }
+      @media (max-width: 767px) {
+        .winners__list.monthly .winners__list_caption {
+          font-size: 24px;
+          margin-bottom: 20px; } }
+    @media (max-width: 767px) {
+      .winners__list.monthly .prize-img {
+        width: 100%;
+        margin: -65px 0; }
+        .winners__list.monthly .prize-img img {
+          max-width: 100%; } }
     .winners__list.monthly .winner {
-      border-radius: 50%;
-      width: 205px;
-      height: 205px;
-      background: -webkit-linear-gradient(275.87deg, #00E245 4.66%, rgba(0, 226, 69, 0.05) 65.76%);
-      background: linear-gradient(174.13deg, #00E245 4.66%, rgba(0, 226, 69, 0.05) 65.76%);
+      width: 237px;
+      height: 230px;
+      text-align: center;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -2466,14 +2486,32 @@ body {
       -webkit-flex-direction: column;
           -ms-flex-direction: column;
               flex-direction: column;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-          -ms-flex-align: center;
-              align-items: center;
+      -webkit-box-align: start;
+      -webkit-align-items: flex-start;
+          -ms-flex-align: start;
+              align-items: flex-start;
       -webkit-box-pack: center;
       -webkit-justify-content: center;
           -ms-flex-pack: center;
-              justify-content: center; }
+              justify-content: center;
+      position: relative; }
+      @media (max-width: 767px) {
+        .winners__list.monthly .winner:first-of-type {
+          margin-left: auto; } }
+      .winners__list.monthly .winner_wrap {
+        margin-left: 15px; }
+      .winners__list.monthly .winner:before {
+        position: absolute;
+        content: '';
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        background: -webkit-linear-gradient(275.87deg, #00E245 4.66%, rgba(0, 226, 69, 0.05) 65.76%);
+        background: linear-gradient(174.13deg, #00E245 4.66%, rgba(0, 226, 69, 0.05) 65.76%);
+        -webkit-clip-path: polygon(20% 0, 100% 60%, 0% 100%);
+                clip-path: polygon(20% 0, 100% 60%, 0% 100%); }
       .winners__list.monthly .winner__text {
         font-weight: bold;
         font-size: 20px;
