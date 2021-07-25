@@ -15,7 +15,7 @@ window.addEventListener('load', function () {
     }
     maskInit();
 
-    $('.select2-hidden-accessible').select2();
+    // $('.select2-hidden-accessible').select2();
 
     (function mobMenu() {
         if(!document.querySelector('.header-nav')) {
@@ -250,4 +250,44 @@ window.addEventListener('load', function () {
             return this.optional(element) || /\+7\(\d+\)\d{3}-\d{2}-\d{2}/.test(value);
         });
     })();
+
+
+//
+
+    if ($('.select').length > 1) {
+        $('select.sl').each(function () {
+            let $this = $(this).not('.select-search');
+            let parent = $(this).not('.select-search').parents('.select');
+            $this.select2({
+                minimumResultsForSearch: Infinity,
+                dropdownParent: parent
+            });
+        });
+        $('.select-search').each(function () {
+            let $this = $(this);
+            let parent = $(this).parents('.select');
+            $this.select2({
+                dropdownParent: parent
+            });
+        });
+    } else {
+        $('select.sl').select2({
+            minimumResultsForSearch: Infinity,
+            dropdownParent: $('.select')
+        });
+    }
+
+    $('.select-search').each(function () {
+        let $this = $(this);
+        let parent = $(this).parents('.select');
+        $this.select2({
+            minimumResultsForSearch: 0,
+            dropdownParent: parent,
+            language: {
+                noResults: function (params) {
+                    return "Найдено 0 строк";
+                }
+            }
+        });
+    });
 });
