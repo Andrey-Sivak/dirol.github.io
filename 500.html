@@ -9,17 +9,7 @@
   <link rel="stylesheet" href="./dist/css/main.css">
   <title>Document</title>
 </head>
-<body class="account">
-
-<svg class="account-bg-triangle" width="1053" height="984" viewBox="0 0 1053 984" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path opacity="0.5" d="M0 984L1053 496.652L140.247 -37L0 984Z" fill="url(#paint0_linear)"/>
-  <defs>
-    <linearGradient id="paint0_linear" x1="659.834" y1="-74.9426" x2="446.733" y2="876.424" gradientUnits="userSpaceOnUse">
-      <stop offset="0.0947848" stop-color="#00E245"/>
-      <stop offset="0.81093" stop-color="#00E245" stop-opacity="0.05"/>
-    </linearGradient>
-  </defs>
-</svg>
+<body class="error-page">
 
 <header>
   <div class="header">
@@ -52,14 +42,14 @@
           </div>
           <div class="main-banner-btn-container">
             <div class="main-banner-btn_wrap">
-              <div class="main-banner-btn">Зарегистрировать чек</div>
+              <a href="#" class="btn main-banner-btn" data-popup="download-check">Зарегистрировать чек</a>
             </div>
           </div>
         </nav>
-        <a href="./account.html" class="header-sign-in pop-op active" data-popup="register">
+        <a href="./account.html" class="header-sign-in pop-op" data-popup="register">
           <img src="./dist/img/human-icon.png" alt="img" />
-          <svg width="24" height="30" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M9.31778 13.5826H0.817776L0.910742 2.24963C0.913824 1.87392 1.06604 1.51359 1.33389 1.24793C1.60175 0.982258 1.96331 0.833008 2.33903 0.833008H22.1724C22.5481 0.833008 22.9072 0.982258 23.1707 1.24793C23.4342 1.51359 23.5805 1.87392 23.5774 2.24963L23.3682 27.7488C23.3652 28.1245 23.2129 28.4848 22.9451 28.7505C22.6772 29.0161 22.3157 29.1654 21.9399 29.1654H2.10661C1.73089 29.1654 1.37178 29.0161 1.10828 28.7505C0.844785 28.4848 0.698485 28.1245 0.701567 27.7488L0.794534 16.4158H9.29453L9.25967 20.6657L16.3895 14.9992L9.35264 9.33272L9.31778 13.5826Z" fill="white"/>
+          <svg class="mob" width="24" height="31" viewBox="0 0 24 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.666626 30.1667C0.666626 27.1609 1.86067 24.2782 3.98608 22.1528C6.11149 20.0274 8.99417 18.8333 12 18.8333C15.0057 18.8333 17.8884 20.0274 20.0138 22.1528C22.1392 24.2782 23.3333 27.1609 23.3333 30.1667H0.666626ZM12 17.4167C7.30371 17.4167 3.49996 13.6129 3.49996 8.91666C3.49996 4.22041 7.30371 0.416656 12 0.416656C16.6962 0.416656 20.5 4.22041 20.5 8.91666C20.5 13.6129 16.6962 17.4167 12 17.4167Z" fill="white"/>
           </svg>
           <span>Личный кабинет</span>
         </a>
@@ -67,45 +57,17 @@
     </div>
   </div>
 </header>
+<main class="container">
 
-<main class="account-wrap">
-  <section class="account__header container">
-    <div class="account__add-card-wrap">
-      <div class="account__add-card">
-        <p class="account__add-card_text">Добавить<br>Выручай-карту</p>
-        <a href="#" data-popup="add-card" class="account__add-card_link"></a>
-      </div>
-    </div>
-    <div class="account__caption">
-      <h1 class="page-caption">ЛИЧНЬlЙ КАБИНЕТ</h1>
-      <a href="#" class="account__caption_logout">Выйти</a>
-    </div>
-    <div class="account__info">
-      <p class="account__info_fio">Константин Константинович
-        <br>Христарождественский</p>
-      <p class="account__info_text email">kKonstantin@gmail.com</p>
-      <p class="account__info_text phone">+7 999 000 0000</p>
-    </div>
-  </section>
-  <section class="account__main">
-    <div class="container">
-      <div class="account__main_round">
-        <p class="account__main_round-caption">МОИ ЧЕКИ</p>
-        <div class="account__main_round-content">
-          <p class="account__main_round-text">Вы еще не зарегистрировали <br>ни одного чека.</p>
-          <a href="#" class="btn account__main_round-btn">ЗАРЕГИСТРИРОВАТЬ ЧЕК</a>
-        </div>
-      </div>
-      <div class="account__main_round">
-        <p class="account__main_round-caption">МОИ ПРИЗЬl</p>
-        <div class="account__main_round-content">
-          <p class="account__main_round-text">Вы еще не получили ни <br>одного приза. Скорее <br>регистрируйте чеки!</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <div class="error-page__wrap">
+    <span class="triangle"></span>
+    <span class="error-page__number">500</span>
+    <p class="error-page__caption">внутренняя ошибка сервера</p>
+    <p class="error-page__note">Что-то пошло не так. <br>Попробуйте зайти позже.</p>
+    <a href="./index.html" class="btn">НА ГЛАВНУЮ</a>
+  </div>
+
 </main>
-
 <footer>
   <div class="footer">
     <div class="footer_wrap">
@@ -168,6 +130,7 @@
   </div>
 </footer>
 
+
 <!-- auth modals -->
 
 <div class="popup" data-modal="register" data-close="true">
@@ -210,17 +173,6 @@
         <button class="register-btn popup-btn btn" data-popup="success">Зарегистрироваться</button>
         <a href="#" class="autorization-btn pop-op" data-popup="auth">Авторизация</a>
       </form>
-
-
-      <!--<div class="popup-form-done">
-        <div class="popup-form-done-text">
-          Пароль для входа на сайт отправлен на e-mail, указанный при
-          регистрации.
-        </div>
-        <a href="" class="popup-form-done-btn js-close-popup popup-btn"
-        >Закрыть</a
-        >
-      </div>-->
     </div>
   </div>
 </div>
@@ -297,43 +249,6 @@
 <!-- end auth modals -->
 
 
-<!-- add card modals -->
-
-<div class="popup" data-modal="add-card" data-close="true">
-  <div class="popup-wrapper">
-    <a href="" class="close-popup" data-close="true"></a>
-    <div class="popup-inner">
-      <div class="popup-title">добавить <br>«вь<span>l</span>ручай-карту»</div>
-      <form action="" class="popup-form">
-        <div class="popup-form-field">
-          <input type="text" class="card-input" name="card" />
-          <p>Введите номер вашей Выручай-карты</p>
-        </div>
-        <button class="sign-in-btn popup-btn btn" data-close="true">добавить</button>
-      </form>
-    </div>
-  </div>
-</div>
-
-<div class="popup" data-modal="edit-card" data-close="true">
-  <div class="popup-wrapper">
-    <a href="" class="close-popup" data-close="true"></a>
-    <div class="popup-inner">
-      <div class="popup-title">редактировать <br>«вь<span>l</span>ручай-карту»</div>
-      <form action="" class="popup-form">
-        <div class="popup-form-field">
-          <input type="text" class="card-input" name="card" />
-          <p>Введите номер вашей Выручай-карты</p>
-        </div>
-        <button class="sign-in-btn popup-btn btn" data-close="true">редактировать</button>
-      </form>
-    </div>
-  </div>
-</div>
-
-<!-- end add card modals -->
-
-
 <!-- download check modal -->
 
 <div class="popup" data-modal="download-check" data-close="true">
@@ -348,6 +263,5 @@
 </div>
 
 <!-- end download check modal -->
-
 </body>
 </html>

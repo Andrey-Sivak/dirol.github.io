@@ -1,4 +1,6 @@
 .popup {
+  max-height: 100px;
+  @include transition-ease;
   position: fixed;
   top: 0;
   left: 0;
@@ -547,6 +549,7 @@
   z-index: 9999;
   opacity: 1;
   pointer-events: visible;
+  max-height: 3000px;
 }
 
 .agree-item-checkbox {

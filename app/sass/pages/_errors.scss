@@ -1,0 +1,87 @@
+.error-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 96px;
+  position: relative;
+  background-image: url('../../img/acc-shine-right-top-.png'),
+  url("../../img/acc-shine-right-bottom.png"),
+  url("../../img/acc-shine-left.png");
+  background-repeat: no-repeat;
+  background-size: initial;
+  background-position: right top, right bottom, left top;
+
+  @include response-to(small) {
+    background-image: url('../../img/top-right-shine-mob.png');
+    background-repeat: no-repeat;
+  }
+
+  & .container {
+    flex-grow: 1;
+    width: 100%;
+  }
+
+  & footer {
+    width: 100%;
+  }
+
+  &__wrap {
+    width: fit-content;
+    margin: 40px auto 0;
+    position: relative;
+
+    & .triangle {
+      position: absolute;
+      background-image: url('../../img/feedback-triangle.svg');
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 337px;
+      height: 315px;
+      top: -50px;
+      left: 55%;
+      z-index: -1;
+      transform: translateX(-50%);
+
+      @include response-to(small) {
+        top: -23px;
+      }
+    }
+  }
+
+  &__note {
+    margin-top: -20px;
+    margin-bottom: 28px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  &__number {
+    font-family: Body-Grotesque;
+    font-weight: 800;
+    font-size: 200px;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.9);
+    color: $green-color;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+  }
+
+  &__caption {
+    font-size: 30px;
+    font-family: Body-Grotesque;
+    font-weight: 800;
+    margin-bottom: 35px;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  & .btn {
+    width: 144px;
+    margin: 0 auto;
+  }
+}
