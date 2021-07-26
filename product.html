@@ -222,133 +222,147 @@
   </div>
 </footer>
 
+<!-- auth modals -->
 
-  <div class="popup" data-modal="register" data-close="true">
-    <div class="popup-wrapper">
-      <a href="" class="close-popup" data-close="true"></a>
-      <div class="popup-inner">
-        <div class="popup-title">Регистрация</div>
-        <form action="" class="popup-form">
-          <div class="popup-form-field">
-            <input type="text" name="fio" />
-            <p>ФИО</p>
-          </div>
-          <div class="popup-form-field">
-            <input type="text" name="phone" class="phone-mask" />
-            <p>Номер телефон</p>
-          </div>
-          <div class="popup-form-field">
-            <input type="text" name="email" />
-            <p>E-mail</p>
-          </div>
-          <div class="popup-form-field checkbox">
-            <label for="checkbox1" class="popup-form-checkbox">
-              <input type="checkbox" name="checkbox1" id="checkbox1" class="popup-form-checkbox-input">
-              <span class="popup-form-checkbox-label">Я согласен с Правилами акции</span>
-            </label>
-          </div>
-          <div class="popup-form-field checkbox">
-            <label for="checkbox2" class="popup-form-checkbox">
-              <input type="checkbox" name="checkbox2" id="checkbox2" class="popup-form-checkbox-input">
-              <span class="popup-form-checkbox-label">Я даю свое согласие на обработку моих персональных данных в соответствиис Правилами акции и Положением об организации обработки ПДнв ООО «Мон’дэлис Русь».</span>
-            </label>
-          </div>
-          <div class="popup-form-field checkbox">
-            <label for="checkbox3" class="popup-form-checkbox">
-              <input type="checkbox" name="checkbox3" id="checkbox3" class="popup-form-checkbox-input">
-              <span class="popup-form-checkbox-label">Я согласен получать рассылки по акциям Mondelez</span>
-            </label>
-          </div>
-          <div class="popup-error">Ошибка</div>
-          <button class="register-btn popup-btn btn">Зарегистрироваться</button>
-          <a href="#" class="autorization-btn pop-op" data-popup="auth"
-          >Авторизация</a
-          >
-        </form>
+<div class="popup" data-modal="register" data-close="true">
+  <div class="popup-wrapper">
+    <a href="" class="close-popup" data-close="true"></a>
+    <div class="popup-inner">
+      <div class="popup-title">Регистрация</div>
+      <form action="" class="popup-form">
+        <div class="popup-form-field">
+          <input type="text" name="fio" />
+          <p>ФИО</p>
+        </div>
+        <div class="popup-form-field">
+          <input type="text" name="phone" class="phone-mask" />
+          <p>Номер телефон</p>
+        </div>
+        <div class="popup-form-field">
+          <input type="text" name="email" />
+          <p>E-mail</p>
+        </div>
+        <div class="popup-form-field checkbox">
+          <label for="checkbox1" class="popup-form-checkbox">
+            <input type="checkbox" name="checkbox1" id="checkbox1" class="popup-form-checkbox-input">
+            <span class="popup-form-checkbox-label">Я согласен с Правилами акции</span>
+          </label>
+        </div>
+        <div class="popup-form-field checkbox">
+          <label for="checkbox2" class="popup-form-checkbox">
+            <input type="checkbox" name="checkbox2" id="checkbox2" class="popup-form-checkbox-input">
+            <span class="popup-form-checkbox-label">Я даю свое согласие на обработку моих персональных данных в соответствиис Правилами акции и Положением об организации обработки ПДнв ООО «Мон’дэлис Русь».</span>
+          </label>
+        </div>
+        <div class="popup-form-field checkbox">
+          <label for="checkbox3" class="popup-form-checkbox">
+            <input type="checkbox" name="checkbox3" id="checkbox3" class="popup-form-checkbox-input">
+            <span class="popup-form-checkbox-label">Я согласен получать рассылки по акциям Mondelez</span>
+          </label>
+        </div>
+        <div class="popup-error">Ошибка</div>
+        <button class="register-btn popup-btn btn" data-popup="success">Зарегистрироваться</button>
+        <a href="#" class="autorization-btn pop-op" data-popup="auth">Авторизация</a>
+      </form>
 
 
-        <!--<div class="popup-form-done">
-          <div class="popup-form-done-text">
-            Пароль для входа на сайт отправлен на e-mail, указанный при
-            регистрации.
-          </div>
-          <a href="" class="popup-form-done-btn js-close-popup popup-btn"
-          >Закрыть</a
-          >
-        </div>-->
-      </div>
+      <!--<div class="popup-form-done">
+        <div class="popup-form-done-text">
+          Пароль для входа на сайт отправлен на e-mail, указанный при
+          регистрации.
+        </div>
+        <a href="" class="popup-form-done-btn js-close-popup popup-btn"
+        >Закрыть</a
+        >
+      </div>-->
     </div>
   </div>
+</div>
 
-  <div class="popup" data-modal="auth" data-close="true">
-    <div class="popup-wrapper">
-      <a href="" class="close-popup" data-close="true"></a>
-      <div class="popup-inner">
-        <div class="popup-title">Авторизация</div>
-        <form action="" class="popup-form">
-          <div class="popup-form-field">
-            <input type="text" name="email" />
-            <p>E-mail</p>
-          </div>
-          <div class="popup-form-field">
-            <input type="password" name="password" />
-            <p>Пароль</p>
-          </div>
-          <div class="popup-error">Ошибка</div>
-          <a href="#" class="forgot-password" data-popup="forgot-pass">Забыли пароль?</a>
-          <button class="sign-in-btn popup-btn btn">Войти</button>
-          <div class="register-text-btn">
-            Если вы в первый раз на сайте —
-            <a href="#" class="pop-op" data-popup="register">зарегистрируйтесь</a>
-          </div>
-        </form>
-      </div>
+<div class="popup" data-modal="auth" data-close="true">
+  <div class="popup-wrapper">
+    <a href="" class="close-popup" data-close="true"></a>
+    <div class="popup-inner">
+      <div class="popup-title">Авторизация</div>
+      <form action="" class="popup-form">
+        <div class="popup-form-field">
+          <input type="text" name="email" />
+          <p>E-mail</p>
+        </div>
+        <div class="popup-form-field">
+          <input type="password" name="password" />
+          <p>Пароль</p>
+        </div>
+        <div class="popup-error">Ошибка</div>
+        <a href="#" class="forgot-password" data-popup="forgot-pass">Забыли пароль?</a>
+        <button class="sign-in-btn popup-btn btn">Войти</button>
+        <div class="register-text-btn">
+          Если вы в первый раз на сайте —
+          <a href="#" class="pop-op" data-popup="register">зарегистрируйтесь</a>
+        </div>
+      </form>
     </div>
   </div>
+</div>
 
-  <div class="popup" data-modal="forgot-pass" data-close="true">
-    <div class="popup-wrapper">
-      <a href="" class="close-popup" data-close="true"></a>
-      <div class="popup-inner">
-        <div class="popup-title">Email</div>
-        <form action="" class="popup-form">
-          <div class="popup-form-field">
-            <input type="text" name="email" />
-            <p>E-mail</p>
-          </div>
-          <div class="popup-error">Ошибка</div>
-          <a href="#" class="forgot-password" data-popup="forgot-pass">Войти</a>
-          <button class="sign-in-btn popup-btn btn">Отправить</button>
-          <div class="register-text-btn">
-            Если вы в первый раз на сайте —
-            <a href="#" class="pop-op" data-popup="register">зарегистрируйтесь</a>
-          </div>
-        </form>
-      </div>
+<div class="popup" data-modal="forgot-pass" data-close="true">
+  <div class="popup-wrapper">
+    <a href="" class="close-popup" data-close="true"></a>
+    <div class="popup-inner">
+      <div class="popup-title">сброс пароля</div>
+      <p class="popup-subtitle">Укажите почту, с которой вы <br>регистрировались на сайте</p>
+      <form action="" class="popup-form">
+        <div class="popup-form-field">
+          <input type="text" name="email" />
+          <p>E-mail</p>
+        </div>
+        <button class="sign-in-btn popup-btn btn" data-popup="reset-pass">ОТПРАВИТЬ</button>
+      </form>
     </div>
   </div>
+</div>
 
-  <!--<div class="popup-form-agree">
-    <div class="popup-form-agree-item">
-      <div class="agree-item-checkbox"></div>
-      <div class="popup-form-agree-text">
-        Я согласен с Правилами акции
-      </div>
+<div class="popup" data-modal="success" data-close="true">
+  <div class="popup-wrapper">
+    <a href="" class="close-popup" data-close="true"></a>
+    <div class="popup-inner">
+      <div class="popup-title">Регистрация <br>пройдена</div>
+      <p class="popup-subtitle">Пароль для входа на сайт <br>отправлен на e-mail, указанный <br>при регистрации.</p>
+      <form action="" class="popup-form">
+        <button class="register-btn popup-btn btn" data-close="true">ЗАКРЬ<span>l</span>ТЬ</button>
+      </form>
     </div>
-    <div class="popup-form-agree-item">
-      <div class="agree-item-checkbox"></div>
-      <div class="popup-form-agree-text">
-        Я даю свое согласие на обработку моих персональных данных в
-        соответствиис Правилами акции и Положением об организации
-        обработки ПДнв ООО «Мон’дэлис Русь».
-      </div>
+  </div>
+</div>
+
+<div class="popup" data-modal="reset-pass" data-close="true">
+  <div class="popup-wrapper">
+    <a href="" class="close-popup" data-close="true"></a>
+    <div class="popup-inner">
+      <div class="popup-title">восстановить пароль</div>
+      <p class="popup-subtitle">Новый пароль выслан на указанный вами <br>адрес электронной почты</p>
+      <form action="" class="popup-form">
+        <button class="register-btn popup-btn btn" data-popup="auth">ВОЙТИ</button>
+      </form>
     </div>
-    <div class="popup-form-agree-item">
-      <div class="agree-item-checkbox"></div>
-      <div class="popup-form-agree-text">
-        Я согласен получать рассылки по акциям Mondelez
-      </div>
+  </div>
+</div>
+
+<!-- end auth modals -->
+
+<!-- download check modal -->
+
+<div class="popup" data-modal="download-check" data-close="true">
+  <div class="popup-wrapper">
+    <a href="" class="close-popup" data-close="true"></a>
+    <div class="popup-inner">
+      <div class="popup-title">загрузка чека</div>
+      <iframe class="popup__iframe"
+              src="https://checkservice.emg.ru/Upload?id=e1842afd-4338-4ffe-a1a3-a9c785b37fe2&participantId=1&hash=694fc2180ed4663a34c0ae07298e6904"></iframe>
     </div>
-  </div>-->
+  </div>
+</div>
+
+<!-- end download check modal -->
 </body>
 </html>

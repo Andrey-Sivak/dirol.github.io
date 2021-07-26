@@ -1,0 +1,112 @@
+@font-face {
+    font-family: "Body-Grotesque";
+    font-weight: 800;
+    src: url("./Body-Grotesque-SlimExtraBold.ttf") format("truetype");
+    font-style: normal; }
+
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent
+}
+
+html {
+    -ms-overflow-style: none;
+    scrollbar-width: none
+}
+
+html body {
+    background-color: transparent;
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    box-sizing: border-box;
+}
+
+.container-tutorial__text p {
+    font-size: 12px;
+    opacity: .7;
+    margin: 0 0 20px;
+}
+
+form.dropzone {
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+    font-size: 12px;
+    background-color: transparent;
+    width: 200px;
+    min-height: 200px;
+    border: 1px dashed #37E050;
+    filter: drop-shadow(0px 0px 4px #37E050);
+    border-radius: 40px;
+    margin: 0 auto;
+}
+html body form.dropzone > div {
+    width: 100%;
+    margin: 15px 0;
+}
+
+form .dropzone .dz-message {
+    margin: 0;
+}
+
+form .dropzone .dz-message span,
+#switchToManually {
+    opacity: 0.7;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    text-decoration-line: underline;
+    background-color: transparent;
+    border: none;
+}
+
+#switchToManually {
+    margin: 10px auto;
+    display: block;
+}
+
+form .dropzone .dz-preview.dz-image-preview {
+    background-color: transparent;
+}
+
+form .dropzone .dz-preview .dz-image {
+    width: 100%;
+    height: 150px;
+}
+
+form .dropzone .dz-preview .dz-remove {
+    position: absolute;
+    right: 8px;
+    top: -4px;
+    color: transparent;
+    width: 25px;
+    height: 25px;
+    background: #37E050;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+form #submit {
+    display: block;
+    margin: 20px auto;
+    background: linear-gradient(180deg, #00E245 0%, rgba(0, 226, 69, 0.3) 100%);
+    opacity: 0.7;
+    border-radius: 20px;
+    transition: ease-in all .3s;
+    min-width: 90px;
+    padding: 10px 0;
+    text-align: center;
+    color: #fff;
+    border: none;
+    font-family: Body-Grotesque;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+form #submit:hover,
+form #submit:active,
+form #submit:focus {
+    opacity: 1;
+}

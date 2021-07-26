@@ -886,7 +886,8 @@ body {
   -webkit-transition: all ease-in-out .3s;
   transition: all ease-in-out .3s; }
   .btn:hover, .btn:active, .btn:focus {
-    background-color: #00e245; }
+    background-color: #00e245;
+    opacity: 1; }
 
 .page-caption {
   font-family: Body-Grotesque;
@@ -1813,7 +1814,8 @@ body {
     border: none;
     margin-left: auto;
     margin-right: auto;
-    display: block; }
+    display: block;
+    height: 350px; }
   .popup[data-modal="success"] .popup-subtitle, .popup[data-modal="reset-pass"] .popup-subtitle, .popup[data-modal="check-denied"] .popup-subtitle, .popup[data-modal="forgot-pass"] .popup-subtitle {
     font-weight: 500;
     width: 100%;

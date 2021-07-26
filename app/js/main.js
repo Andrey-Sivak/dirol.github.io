@@ -15,6 +15,15 @@ window.addEventListener('load', function () {
     }
     maskInit();
 
+    function cardValidation() {
+        $(".card-input").inputmask({
+            mask: "9999-9999-9999-9999",
+            clearIncomplete: true,
+        });
+    }
+
+    cardValidation();
+
     (function mobMenu() {
         if(!document.querySelector('.header-nav')) {
             return;
@@ -176,6 +185,9 @@ window.addEventListener('load', function () {
                 validClass: 'success',
                 rules: {
                     fio: {
+                        required: true
+                    },
+                    card: {
                         required: true
                     },
                     FName: {

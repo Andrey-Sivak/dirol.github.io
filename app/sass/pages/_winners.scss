@@ -64,6 +64,7 @@
   &__wrap {
     max-width: 811px;
     margin: 0 auto;
+    min-height: 585px;
   }
 
   &__tabs {
@@ -130,14 +131,10 @@
     font-size: 16px;
     margin-bottom: 30px;
     @include transition-ease;
-    opacity: 0;
-    z-index: -1000;
-    position: absolute;
+    display: none;
 
     &.active {
-      position: static;
-      opacity: 1;
-      z-index: 100;
+      display: block;
     }
 
     &_row {
