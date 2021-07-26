@@ -25,7 +25,7 @@
     border-radius: 30px;
     padding-top: 31px;
     padding-bottom: 33px;
-    margin-bottom: 1350px;
+    margin-bottom: 50px;
 
     @include response-to(small) {
       max-width: 320px;
@@ -76,6 +76,13 @@
         user-select: none;
         padding-left: 23px;
         display: block;
+
+        & a {
+          color: $green-color;
+          font-style: italic;
+          font-weight: 300;
+          text-decoration: underline;
+        }
 
         &:before,
         &:after {
@@ -613,4 +620,5 @@
 
 .register-text-btn a {
   font-weight: 700;
+  text-decoration: underline;
 }

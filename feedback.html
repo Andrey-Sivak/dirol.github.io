@@ -9,17 +9,7 @@
   <link rel="stylesheet" href="./dist/css/main.css">
   <title>Document</title>
 </head>
-<body class="account">
-
-<svg class="account-bg-triangle" width="1053" height="984" viewBox="0 0 1053 984" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path opacity="0.5" d="M0 984L1053 496.652L140.247 -37L0 984Z" fill="url(#paint0_linear)"/>
-  <defs>
-    <linearGradient id="paint0_linear" x1="659.834" y1="-74.9426" x2="446.733" y2="876.424" gradientUnits="userSpaceOnUse">
-      <stop offset="0.0947848" stop-color="#00E245"/>
-      <stop offset="0.81093" stop-color="#00E245" stop-opacity="0.05"/>
-    </linearGradient>
-  </defs>
-</svg>
+<body>
 
 <header>
   <div class="header">
@@ -32,7 +22,7 @@
         </div>
         <nav class="header-nav">
           <a class="dont-drop" href="#" target="_blank">don’t drop</a>
-          <div class="header-nav-item">
+          <div class="header-nav-item active">
             <a href="/">Главная</a>
           </div>
           <div class="header-nav-item">
@@ -52,14 +42,14 @@
           </div>
           <div class="main-banner-btn-container">
             <div class="main-banner-btn_wrap">
-              <div class="main-banner-btn">Зарегистрировать чек</div>
+              <a href="#" class="btn main-banner-btn" data-popup="download-check">Зарегистрировать чек</a>
             </div>
           </div>
         </nav>
-        <a href="./account.html" class="header-sign-in pop-op active" data-popup="register">
+        <a href="./account.html" class="header-sign-in pop-op" data-popup="register">
           <img src="./dist/img/human-icon.png" alt="img" />
-          <svg width="24" height="30" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M9.31778 13.5826H0.817776L0.910742 2.24963C0.913824 1.87392 1.06604 1.51359 1.33389 1.24793C1.60175 0.982258 1.96331 0.833008 2.33903 0.833008H22.1724C22.5481 0.833008 22.9072 0.982258 23.1707 1.24793C23.4342 1.51359 23.5805 1.87392 23.5774 2.24963L23.3682 27.7488C23.3652 28.1245 23.2129 28.4848 22.9451 28.7505C22.6772 29.0161 22.3157 29.1654 21.9399 29.1654H2.10661C1.73089 29.1654 1.37178 29.0161 1.10828 28.7505C0.844785 28.4848 0.698485 28.1245 0.701567 27.7488L0.794534 16.4158H9.29453L9.25967 20.6657L16.3895 14.9992L9.35264 9.33272L9.31778 13.5826Z" fill="white"/>
+          <svg class="mob" width="24" height="31" viewBox="0 0 24 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.666626 30.1667C0.666626 27.1609 1.86067 24.2782 3.98608 22.1528C6.11149 20.0274 8.99417 18.8333 12 18.8333C15.0057 18.8333 17.8884 20.0274 20.0138 22.1528C22.1392 24.2782 23.3333 27.1609 23.3333 30.1667H0.666626ZM12 17.4167C7.30371 17.4167 3.49996 13.6129 3.49996 8.91666C3.49996 4.22041 7.30371 0.416656 12 0.416656C16.6962 0.416656 20.5 4.22041 20.5 8.91666C20.5 13.6129 16.6962 17.4167 12 17.4167Z" fill="white"/>
           </svg>
           <span>Личный кабинет</span>
         </a>
@@ -67,45 +57,182 @@
     </div>
   </div>
 </header>
+<section class="first-section">
 
-<main class="account-wrap">
-  <section class="account__header container">
-    <div class="account__add-card-wrap">
-      <div class="account__add-card">
-        <p class="account__add-card_text">Добавить<br>«Выручай-карту»</p>
-        <a href="#" data-popup="add-card" class="account__add-card_link"></a>
+  <div class="main-banner-blur"></div>
+
+  <div class="main-banner container">
+    <div class="main-banner-top">
+      <div class="main-banner-top-words">
+        <div class="main-banner-word-1">
+          <img
+                  class="mob"
+                  src="./dist/img/main-banner-img-1.png"
+                  alt="img"
+          />
+        </div>
+        <div class="main-banner-word-2">
+          <img src="./dist/img/main-banner-img-2.png" alt="img" class="" />
+        </div>
+      </div>
+      <img src="./dist/img/main-banner-img-1-mob.png" alt="img" class="main-banner-top-words-mob">
+    </div>
+    <div class="main-banner-bg-img">
+      <img src="./dist/img/main-banner-bg-img.png" alt="img" />
+      <svg class="triangle" width="616" height="592" viewBox="0 0 616 592" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 592L616 309.424L82.0437 0L0 592Z" fill="url(#paint0_linear)"/>
+        <defs>
+          <linearGradient id="paint0_linear" x1="386" y1="-22" x2="263.428" y2="530.089" gradientUnits="userSpaceOnUse">
+            <stop offset="0.0947848" stop-color="#00E245"/>
+            <stop offset="0.81093" stop-color="#00E245" stop-opacity="0.05"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <svg class="shine" width="772" height="649" viewBox="0 0 772 649" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g filter="url(#filter0_f)">
+          <path d="M127.349 483.636C172.644 604.944 339.69 524.148 441.537 496.696C543.384 469.244 636.034 498.022 659.918 430.373C683.801 362.723 693.547 154.846 433.439 107.698C173.332 60.5494 40.3265 248.855 127.349 483.636Z" fill="#00E245"/>
+        </g>
+        <defs>
+          <filter id="filter0_f" x="0.767578" y="0.414764" width="770.423" height="648.131" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+            <feGaussianBlur stdDeviation="50" result="effect1_foregroundBlur"/>
+          </filter>
+        </defs>
+      </svg>
+    </div>
+    <div class="main-banner-inner">
+      <div class="main-banner-bottom">
+        <div class="main-banner-bottom-item">
+          <div class="main-banner-bottom-item-help">
+            <img src="./dist/img/main-banner-bottom-img-1.png"
+                 alt="img"
+                 class="main-banner-bottom-item-img"/>
+          </div>
+          <div class="main-banner-bottom-item-content">
+            <div class="main-banner-bottom-item-green">КУПИТЕ</div>
+            <div class="main-banner-bottom-item-text">
+              любые<br />2 пачки<br />Dirol
+            </div>
+          </div>
+        </div>
+        <div class="main-banner-bottom-item">
+          <div class="main-banner-bottom-item-help">
+            <img src="./dist/img/main-banner-bottom-img-2.png"
+                 alt="img"
+                 class="main-banner-bottom-item-img"/>
+          </div>
+          <div class="main-banner-bottom-item-content">
+            <div class="main-banner-bottom-item-green">РЕГИСТРИРУЙТЕ</div>
+            <div class="main-banner-bottom-item-text">
+              чек на сайте<br />x5.diroldontdrop.ru<br /><span
+            >с 1 августа по 30 сентября<br />2021 г.</span
+            >
+            </div>
+          </div>
+        </div>
+        <div class="main-banner-bottom-item">
+          <div class="main-banner-bottom-item-help">
+            <img src="./dist/img/main-banner-bottom-img-3.png"
+                    alt="img"
+                    class="main-banner-bottom-item-img"/>
+            <img src="./dist/img/main-banner-bottom-img-3-mob.png"
+                    alt="img"
+                    class="main-banner-bottom-item-img mob"/>
+          </div>
+          <div class="main-banner-bottom-item-content">
+            <div class="main-banner-bottom-item-green">ВЬlИГРЬlВАЙТЕ</div>
+            <div class="main-banner-bottom-item-text">
+              <div class="main-banner-bottom-item-text-li">
+                баллы на<br />Выручай-карту
+              </div>
+              <div class="main-banner-bottom-item-text-li">
+                модный мерч от Dirol
+              </div>
+              <div class="main-banner-bottom-item-text-li green">
+                Эксклюзивные<br />кроссовки<br />из переработанной<br />жвачки
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="account__caption">
-      <h1 class="page-caption">ЛИЧНЬlЙ КАБИНЕТ</h1>
-      <a href="#" class="account__caption_logout">Выйти</a>
+    <div class="main-banner-btn-container page">
+      <div class="main-banner-btn_wrap">
+        <div class="btn main-banner-btn" data-popup="download-check">Зарегистрировать чек</div>
+      </div>
     </div>
-    <div class="account__info">
-      <p class="account__info_fio">Константин Константинович
-        <br>Христарождественский</p>
-      <p class="account__info_text email">kKonstantin@gmail.com</p>
-      <p class="account__info_text phone">+7 999 000 0000</p>
-    </div>
-  </section>
-  <section class="account__main">
+  </div>
+</section>
+<section>
+  <div class="main-prizes">
     <div class="container">
-      <div class="account__main_round">
-        <p class="account__main_round-caption">МОИ ЧЕКИ</p>
-        <div class="account__main_round-content">
-          <p class="account__main_round-text">Вы еще не зарегистрировали <br>ни одного чека.</p>
-          <a href="#" class="btn account__main_round-btn">ЗАРЕГИСТРИРОВАТЬ ЧЕК</a>
-        </div>
-      </div>
-      <div class="account__main_round">
-        <p class="account__main_round-caption">МОИ ПРИЗЬl</p>
-        <div class="account__main_round-content">
-          <p class="account__main_round-text">Вы еще не получили ни <br>одного приза. Скорее <br>регистрируйте чеки!</p>
+      <div class="main-prizes-inner">
+        <div class="main-prizes-title">ПРИЗЬl</div>
+        <div class="main-prizes-items">
+          <div class="main-prizes-item">
+            <div class="main-prizes-item-title">ЕЖЕДНЕВНЬlЕ<span> ПРИЗЬl</span></div>
+            <div class="main-prizes-item-img">
+              <img src="./dist/img/main-prizes-card.png" alt="img">
+              <svg fill="none">
+                <path d="M0 185L191 96.695L25.4389 0L0 185Z" fill="url(#paint0_linear)"/>
+                <defs>
+                  <linearGradient id="paint0_linear" x1="119.685" y1="-6.875" x2="81.109" y2="165.525" gradientUnits="userSpaceOnUse">
+                    <stop offset="0.0947848" stop-color="#00E245"/>
+                    <stop offset="0.81093" stop-color="#00E245" stop-opacity="0.05"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="main-prizes-item-text">
+              <span>1000, 5000, 10000 баллов</span><br />на "Выручай-карту"
+            </div>
+          </div>
+          <div class="main-prizes-item">
+            <div class="main-prizes-item-title">ЕЖЕНЕДЕЛЬНЬlЕ<span> ПРИЗЬl</span></div>
+            <div class="main-prizes-item-img">
+              <img src="./dist/img/main-pizes-merch.png" alt="img">
+              <svg fill="none">
+                <path d="M0 185L191 96.695L25.4389 0L0 185Z" fill="url(#paint0_linear)"/>
+                <defs>
+                  <linearGradient id="paint0_linear" x1="119.685" y1="-6.875" x2="81.109" y2="165.525" gradientUnits="userSpaceOnUse">
+                    <stop offset="0.0947848" stop-color="#00E245"/>
+                    <stop offset="0.81093" stop-color="#00E245" stop-opacity="0.05"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="main-prizes-item-text">
+              Модный мерч<br />
+              <span>от Dirol x Maggi</span>
+              <a target="_blank" href="https://www.instagram.com/maggigad/?hl=ru">@maggigad</a>
+            </div>
+          </div>
+          <div class="main-prizes-item">
+            <div class="main-prizes-item-title">ЕЖЕМЕСЯЧНЬlЕ<span> ПРИЗЬl</span></div>
+            <div class="main-prizes-item-img">
+              <img src="./dist/img/main-prizes-snickers.png" alt="img">
+              <svg fill="none">
+                <path d="M0 185L191 96.695L25.4389 0L0 185Z" fill="url(#paint0_linear)"/>
+                <defs>
+                  <linearGradient id="paint0_linear" x1="119.685" y1="-6.875" x2="81.109" y2="165.525" gradientUnits="userSpaceOnUse">
+                    <stop offset="0.0947848" stop-color="#00E245"/>
+                    <stop offset="0.81093" stop-color="#00E245" stop-opacity="0.05"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="main-prizes-item-text">
+              Эксклюзивные кроссовки<br />из переработанной жвачки<br /><span
+            >от Dirol x Shane Gonzales</span> <a target="_blank" href="https://www.instagram.com/shaneaveli/">@shaneaveli</a> <span>x Maggi</span>
+              <a target="_blank" href="https://www.instagram.com/maggigad/?hl=ru">@maggigad</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </section>
-</main>
-
+  </div>
+</section>
 <footer>
   <div class="footer">
     <div class="footer_wrap">
@@ -167,6 +294,7 @@
     <div class="footer-white-bg"></div>
   </div>
 </footer>
+
 
 <!-- auth modals -->
 
@@ -297,43 +425,6 @@
 <!-- end auth modals -->
 
 
-<!-- add card modals -->
-
-<div class="popup" data-modal="add-card" data-close="true">
-  <div class="popup-wrapper">
-    <a href="" class="close-popup" data-close="true"></a>
-    <div class="popup-inner">
-      <div class="popup-title">добавить <br>«вь<span>l</span>ручай-карту»</div>
-      <form action="" class="popup-form">
-        <div class="popup-form-field">
-          <input type="text" class="card-input" name="card" />
-          <p>Введите номер вашей «Выручай-карты»</p>
-        </div>
-        <button class="sign-in-btn popup-btn btn" data-close="true">добавить</button>
-      </form>
-    </div>
-  </div>
-</div>
-
-<div class="popup" data-modal="edit-card" data-close="true">
-  <div class="popup-wrapper">
-    <a href="" class="close-popup" data-close="true"></a>
-    <div class="popup-inner">
-      <div class="popup-title">редактировать <br>«вь<span>l</span>ручай-карту»</div>
-      <form action="" class="popup-form">
-        <div class="popup-form-field">
-          <input type="text" class="card-input" name="card" />
-          <p>Введите номер вашей «Выручай-карты»</p>
-        </div>
-        <button class="sign-in-btn popup-btn btn" data-close="true">редактировать</button>
-      </form>
-    </div>
-  </div>
-</div>
-
-<!-- end add card modals -->
-
-
 <!-- download check modal -->
 
 <div class="popup" data-modal="download-check" data-close="true">
@@ -348,6 +439,5 @@
 </div>
 
 <!-- end download check modal -->
-
 </body>
 </html>

@@ -837,7 +837,7 @@ input[type="number"] {
 */
 @font-face {
   font-family: Body-Grotesque;
-  src: url("../fonts/Body-Grotesque-SlimExtraBold.ttf"); }
+  src: url("../fonts/BodyGrotesque-SlimExtraBold.otf"); }
 
 /*
 @font-face {
@@ -1437,7 +1437,7 @@ body {
     border-radius: 30px;
     padding-top: 31px;
     padding-bottom: 33px;
-    margin-bottom: 1350px; }
+    margin-bottom: 50px; }
     @media (max-width: 767px) {
       .popup-wrapper {
         max-width: 320px; } }
@@ -1491,6 +1491,11 @@ body {
                 user-select: none;
         padding-left: 23px;
         display: block; }
+        .popup-form-checkbox-label a {
+          color: #00E245;
+          font-style: italic;
+          font-weight: 300;
+          text-decoration: underline; }
         .popup-form-checkbox-label:before, .popup-form-checkbox-label:after {
           position: absolute;
           border-radius: 50%;
@@ -1921,7 +1926,8 @@ body {
   margin: 13px auto 0; }
 
 .register-text-btn a {
-  font-weight: 700; }
+  font-weight: 700;
+  text-decoration: underline; }
 
 .have-tooltip {
   position: relative; }
