@@ -249,6 +249,36 @@ window.addEventListener('load', function () {
         });
     })();
 
+    (function productSlider() {
+        if (!document.querySelector('.product__slider')) {
+            return;
+        }
+
+        $('.product__slider').slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            prevArrow: '<div class="slick-prev"><span></span></div>',
+            nextArrow: '<div class="slick-next"><span></span></div>',
+            autoplay: false,
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                },
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                }
+            ]
+
+        });
+    })();
+
 
 //
 

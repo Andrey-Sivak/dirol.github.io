@@ -3367,4 +3367,81 @@ body {
           font-size: 16px;
           margin-bottom: 0; }
 
+.product {
+  padding-top: 96px;
+  position: relative;
+  background-image: url("../img/acc-shine-right-top-.png"), url("../img/acc-shine-left.png");
+  background-repeat: no-repeat;
+  background-size: initial;
+  background-position: right top, left top; }
+  @media (max-width: 767px) {
+    .product {
+      background-image: url("../img/top-right-shine-mob.png");
+      background-repeat: no-repeat; } }
+  .product__slider {
+    width: 100%;
+    max-width: 1280px;
+    margin: 66px auto 50px;
+    padding: 0 60px; }
+    @media (max-width: 767px) {
+      .product__slider {
+        padding: 0 39px; } }
+    .product__slider .slick-arrow {
+      background: -webkit-linear-gradient(246.17deg, #00E245 6.9%, rgba(0, 226, 69, 0.05) 85.64%);
+      background: linear-gradient(203.83deg, #00E245 6.9%, rgba(0, 226, 69, 0.05) 85.64%);
+      width: 59px;
+      height: 59px;
+      border-radius: 50%;
+      z-index: 10;
+      cursor: pointer; }
+      @media (max-width: 767px) {
+        .product__slider .slick-arrow {
+          width: 39px;
+          height: 39px; } }
+      .product__slider .slick-arrow span {
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-repeat: no-repeat; }
+      .product__slider .slick-arrow.slick-next {
+        right: 0; }
+        .product__slider .slick-arrow.slick-next span {
+          background-image: url("../img/acc-slider-rt.png");
+          background-position: 10px center; }
+      .product__slider .slick-arrow.slick-prev {
+        left: 0; }
+        .product__slider .slick-arrow.slick-prev span {
+          background-image: url("../img/acc-slider-lt.png");
+          background-position: 16px center; }
+      .product__slider .slick-arrow:before {
+        content: none; }
+  .product__slide {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 20px; }
+    .product__slide_img {
+      width: 260px;
+      margin: 0 auto;
+      max-width: 90%; }
+      .product__slide_img img {
+        max-width: 100%;
+        margin: 0 auto; }
+    .product__slide_title {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-style: italic;
+      font-weight: 600;
+      font-size: 22px;
+      text-transform: uppercase;
+      color: #fff; }
+      @media (max-width: 992px) {
+        .product__slide_title br {
+          display: none; } }
+    .product__slide_weight {
+      font-size: 16px;
+      color: #00E245; }
+  @media (max-width: 767px) {
+    .product .footer {
+      padding-top: 0; } }
+
 /*# sourceMappingURL=main.css.map */
