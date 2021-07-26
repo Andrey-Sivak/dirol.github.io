@@ -1753,15 +1753,13 @@ body {
     .popup-note a {
       color: #00E245; }
   .popup-error {
-    position: absolute;
-    z-index: -1000;
-    visibility: hidden;
+    max-width: 80%;
     font-size: 12px;
     line-height: calc(15 / 12);
     font-weight: 400;
     text-align: center;
     color: #ff7c7c;
-    margin-bottom: 13px; }
+    margin: 0 auto 13px; }
     .popup-error.active {
       visibility: visible; }
   .popup .size-table {
