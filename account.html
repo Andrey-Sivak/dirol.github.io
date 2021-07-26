@@ -73,7 +73,7 @@
     <div class="account__add-card-wrap">
       <div class="account__add-card">
         <p class="account__add-card_text">Добавить<br>«Выручай-карту»</p>
-        <a href="#" class="account__add-card_link"></a>
+        <a href="#" data-popup="add-card" class="account__add-card_link"></a>
       </div>
     </div>
     <div class="account__caption">
@@ -119,7 +119,7 @@
                     <img src="./dist/img/order.png" alt="img">
                   </div>
                   <div class="date">09.09.20</div>
-                  <div class="status have-tooltip" data-tooltip="check-denied">Отклонен</div>
+                  <div class="status" data-popup="check-denied">Отклонен</div>
                 </div>
                 <div class="account__main_round-table--row">
                   <div class="photo">
@@ -627,6 +627,24 @@
 <!-- end modals for get t-shirt or bag -->
 
 
+<!-- check denied modal -->
+
+<div class="popup" data-modal="check-denied" data-close="true">
+  <div class="popup-wrapper">
+    <a href="" class="close-popup" data-close="true"></a>
+    <div class="popup-inner">
+      <div class="popup-title">чек отклонён</div>
+      <p class="popup-subtitle">Этот чек уже был загружен ранее. <br>Один чек можно загрузить <br>только один раз.</p>
+      <form action="" class="popup-form">
+        <button class="register-btn popup-btn btn" data-close="true">закрь<span>l</span>ть</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- end check denied modal -->
+
+
 <!-- download check modal -->
 
 <div class="popup" data-modal="download-check" data-close="true">
@@ -641,5 +659,21 @@
 </div>
 
 <!-- end download check modal -->
+
+<div class="popup" data-modal="add-card" data-close="true">
+  <div class="popup-wrapper">
+    <a href="" class="close-popup" data-close="true"></a>
+    <div class="popup-inner">
+      <div class="popup-title">добавить <br>«вь<span>l</span>ручай-карту»</div>
+      <form action="" class="popup-form">
+        <div class="popup-form-field">
+          <input type="text" class="card-input" name="card" />
+          <p>Введите номер вашей «Выручай-карты»</p>
+        </div>
+        <button class="sign-in-btn popup-btn btn" data-close="true">добавить</button>
+      </form>
+    </div>
+  </div>
+</div>
 </body>
 </html>

@@ -1,17 +1,17 @@
-.winners {
-  padding-top: 96px;
-  position: relative;
-  background-image: url('../../img/acc-shine-right-top-.png'),
-  url("../../img/acc-shine-right-bottom.png"),
-  url("../../img/acc-shine-left.png");
-  background-repeat: no-repeat;
-  background-size: initial;
-  background-position: right top, right bottom, left top;
-
-  @include response-to(small) {
-    background-image: url('../../img/top-right-shine-mob.png');
+  .winners {
+    padding-top: 96px;
+    position: relative;
+    background-image: url('../../img/acc-shine-right-top-.png'),
+    url("../../img/acc-shine-right-bottom.png"),
+    url("../../img/acc-shine-left.png");
     background-repeat: no-repeat;
-  }
+    background-size: initial;
+    background-position: right top, right bottom, left top;
+
+    @include response-to(small) {
+      background-image: url('../../img/top-right-shine-mob.png');
+      background-repeat: no-repeat;
+    }
 
   &__search {
     margin: 32px auto 56px;
