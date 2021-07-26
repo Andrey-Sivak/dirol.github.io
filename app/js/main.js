@@ -231,6 +231,12 @@ window.addEventListener('load', function () {
                     size: {
                         required: true
                     },
+                    theme: {
+                        required: true
+                    },
+                    mess: {
+                        required: true
+                    },
                     password: {
                         required: true,
                         normalizer: function normalizer(value) {
@@ -330,4 +336,20 @@ window.addEventListener('load', function () {
             }
         });
     });
+
+    (function faq() {
+        if (!document.querySelector('.feedback__faq_wrap')) {
+            return;
+        }
+
+        const items = [...document.querySelector('.feedback__faq_wrap').children];
+
+        items.forEach(i => {
+            i.addEventListener('click', function (e) {
+                if (e.target.classList.contains('feedback__faq_ask')) {
+                    i.classList.toggle('active');
+                }
+            })
+        })
+    })();
 });
