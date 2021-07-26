@@ -17,6 +17,17 @@
     max-width: 1280px;
     margin: 66px auto 50px;
     padding: 0 60px;
+    opacity: 1;
+    position: relative;
+    z-index: 1;
+    max-height: 1000px;
+    @include transition-ease;
+
+    &.hide {
+      z-index: -1000;
+      opacity: 0;
+      max-height: 1px;
+    }
 
     @include response-to(small) {
       padding: 0 39px;
@@ -48,6 +59,14 @@
         & span {
           background-image: url('../../img/acc-slider-rt.png');
           background-position: 10px center;
+          background-size: contain;
+
+          @include response-to(small) {
+            width: 70%;
+            display: block;
+            margin: 0 auto;
+            background-position: -1px center;
+          }
         }
       }
 
@@ -57,6 +76,14 @@
         & span {
           background-image: url('../../img/acc-slider-lt.png');
           background-position: 16px center;
+          background-size: contain;
+
+          @include response-to(small) {
+            width: 70%;
+            display: block;
+            margin: 0 auto;
+            background-position: 5px center;
+          }
         }
       }
 
@@ -108,7 +135,7 @@
   & .footer {
 
     @include response-to(small) {
-      padding-top: 0;
+      margin-top: -100px;
     }
   }
 }

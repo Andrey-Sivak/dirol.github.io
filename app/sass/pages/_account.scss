@@ -342,6 +342,16 @@
       }
 
       &-slider {
+        position: relative;
+        z-index: 1;
+        opacity: 1;
+        max-height: 1000px;
+
+        &.hide {
+          max-height: 1px;
+          opacity: 0;
+          z-index: -1000;
+        }
 
         & .slick-arrow {
           width: 35px;

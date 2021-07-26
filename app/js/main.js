@@ -73,7 +73,10 @@ window.addEventListener('load', function () {
             return;
         }
 
-        $('.account__main_round-slider').slick({
+        const slider = $('.account__main_round-slider');
+        const loader = document.querySelector('.loader');
+
+        $(slider).slick({
             infinite: true,
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -81,6 +84,9 @@ window.addEventListener('load', function () {
             nextArrow: '<div class="slick-next"><span></span></div>',
             autoplay: false,
         });
+
+        loader.parentElement.removeChild(loader);
+        slider.removeClass('hide');
     })();
 
     (function tooltips() {
@@ -272,7 +278,10 @@ window.addEventListener('load', function () {
             return;
         }
 
-        $('.product__slider').slick({
+        const loader = document.querySelector('.loader') || null;
+        const slider = $('.product__slider');
+
+        $(slider).slick({
             infinite: true,
             slidesToShow: 3,
             slidesToScroll: 1,
@@ -293,8 +302,12 @@ window.addEventListener('load', function () {
                     }
                 }
             ]
-
         });
+
+        if (loader && slider.hasClass('hide')) {
+            loader.parentElement.removeChild(loader);
+            slider.removeClass('hide');
+        }
     })();
 
 

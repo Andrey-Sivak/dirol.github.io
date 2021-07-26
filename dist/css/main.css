@@ -2873,27 +2873,36 @@ body {
         margin-top: 13px;
         margin-left: auto;
         margin-right: auto; }
-      .account__main_round-slider .slick-arrow {
-        width: 35px;
-        height: 32px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        z-index: 100; }
-        .account__main_round-slider .slick-arrow.slick-next {
-          background-image: url("../img/acc-slider-rt.png");
-          right: 27px; }
-          @media (max-width: 767px) {
-            .account__main_round-slider .slick-arrow.slick-next {
-              right: 10px; } }
-        .account__main_round-slider .slick-arrow.slick-prev {
-          background-image: url("../img/acc-slider-lt.png");
-          left: 27px; }
-          @media (max-width: 767px) {
-            .account__main_round-slider .slick-arrow.slick-prev {
-              left: 10px; } }
-        .account__main_round-slider .slick-arrow:before {
-          content: none; }
+      .account__main_round-slider {
+        position: relative;
+        z-index: 1;
+        opacity: 1;
+        max-height: 1000px; }
+        .account__main_round-slider.hide {
+          max-height: 1px;
+          opacity: 0;
+          z-index: -1000; }
+        .account__main_round-slider .slick-arrow {
+          width: 35px;
+          height: 32px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          z-index: 100; }
+          .account__main_round-slider .slick-arrow.slick-next {
+            background-image: url("../img/acc-slider-rt.png");
+            right: 27px; }
+            @media (max-width: 767px) {
+              .account__main_round-slider .slick-arrow.slick-next {
+                right: 10px; } }
+          .account__main_round-slider .slick-arrow.slick-prev {
+            background-image: url("../img/acc-slider-lt.png");
+            left: 27px; }
+            @media (max-width: 767px) {
+              .account__main_round-slider .slick-arrow.slick-prev {
+                left: 10px; } }
+          .account__main_round-slider .slick-arrow:before {
+            content: none; }
       .account__main_round-slide {
         text-align: center;
         padding-bottom: 25px; }
@@ -3409,7 +3418,17 @@ body {
     width: 100%;
     max-width: 1280px;
     margin: 66px auto 50px;
-    padding: 0 60px; }
+    padding: 0 60px;
+    opacity: 1;
+    position: relative;
+    z-index: 1;
+    max-height: 1000px;
+    -webkit-transition: all ease-in-out .3s;
+    transition: all ease-in-out .3s; }
+    .product__slider.hide {
+      z-index: -1000;
+      opacity: 0;
+      max-height: 1px; }
     @media (max-width: 767px) {
       .product__slider {
         padding: 0 39px; } }
@@ -3434,12 +3453,26 @@ body {
         right: 0; }
         .product__slider .slick-arrow.slick-next span {
           background-image: url("../img/acc-slider-rt.png");
-          background-position: 10px center; }
+          background-position: 10px center;
+          background-size: contain; }
+          @media (max-width: 767px) {
+            .product__slider .slick-arrow.slick-next span {
+              width: 70%;
+              display: block;
+              margin: 0 auto;
+              background-position: -1px center; } }
       .product__slider .slick-arrow.slick-prev {
         left: 0; }
         .product__slider .slick-arrow.slick-prev span {
           background-image: url("../img/acc-slider-lt.png");
-          background-position: 16px center; }
+          background-position: 16px center;
+          background-size: contain; }
+          @media (max-width: 767px) {
+            .product__slider .slick-arrow.slick-prev span {
+              width: 70%;
+              display: block;
+              margin: 0 auto;
+              background-position: 5px center; } }
       .product__slider .slick-arrow:before {
         content: none; }
   .product__slide {
@@ -3469,7 +3502,7 @@ body {
       color: #00E245; }
   @media (max-width: 767px) {
     .product .footer {
-      padding-top: 0; } }
+      margin-top: -100px; } }
 
 .feedback {
   padding-top: 96px;
