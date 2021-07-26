@@ -1704,7 +1704,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 20px 5px;
     border-radius: 20px;
     background: -webkit-linear-gradient(top, #00e245 0%, rgba(0, 226, 69, 0.3) 100%);
     background: linear-gradient(180deg, #00e245 0%, rgba(0, 226, 69, 0.3) 100%);
@@ -3196,7 +3196,7 @@ body {
       font-size: 30px;
       text-align: center;
       color: #fff;
-      padding: 12px 0 13px;
+      padding: 12px 0 5px;
       cursor: pointer;
       -webkit-transition: all ease-in-out .3s;
       transition: all ease-in-out .3s; }
@@ -3205,7 +3205,7 @@ body {
       @media (max-width: 767px) {
         .winners__tabs_item {
           font-size: 16px;
-          padding: 6px 0;
+          padding: 6px 0 1px;
           width: 40%; } }
       .winners__tabs_item:nth-child(2) {
         margin: 0 -3%; }
