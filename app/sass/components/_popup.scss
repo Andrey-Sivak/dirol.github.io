@@ -351,9 +351,15 @@
     text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.25);
     text-transform: uppercase;
     cursor: pointer;
+    font-family: Body-Grotesque;
 
     @include response-to(small) {
       font-size: 16px;
+    }
+
+    & span {
+      font-family: Body-Grotesque;
+      text-transform: lowercase;
     }
   }
 
@@ -464,6 +470,24 @@
           }
         }
       }
+    }
+  }
+
+  &[data-modal="success"],
+  &[data-modal="reset-pass"],
+  &[data-modal="forgot-pass"] {
+
+    .popup-subtitle {
+      font-weight: 500;
+      width: 100%;
+      max-width: unset;
+    }
+  }
+
+  &[data-modal="reset-pass"] {
+
+    .popup-subtitle {
+      margin-bottom: 0;
     }
   }
 
