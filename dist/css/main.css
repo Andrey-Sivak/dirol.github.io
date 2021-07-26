@@ -1759,7 +1759,8 @@ body {
     font-weight: 400;
     text-align: center;
     color: #ff7c7c;
-    margin: 0 auto 13px; }
+    margin: 0 auto 13px;
+    width: 100%; }
     .popup-error.active {
       visibility: visible; }
   .popup .size-table {
