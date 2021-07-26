@@ -543,6 +543,9 @@
     <div class="footer-white-bg"></div>
   </div>
 </footer>
+
+<!-- auth modals -->
+
 <div class="popup" data-modal="register" data-close="true">
   <div class="popup-wrapper">
     <a href="" class="close-popup" data-close="true"></a>
@@ -580,10 +583,8 @@
           </label>
         </div>
         <div class="popup-error">Ошибка</div>
-        <button class="register-btn popup-btn btn">Зарегистрироваться</button>
-        <a href="#" class="autorization-btn pop-op" data-popup="auth"
-        >Авторизация</a
-        >
+        <button class="register-btn popup-btn btn" data-popup="success">Зарегистрироваться</button>
+        <a href="#" class="autorization-btn pop-op" data-popup="auth">Авторизация</a>
       </form>
 
 
@@ -630,22 +631,46 @@
   <div class="popup-wrapper">
     <a href="" class="close-popup" data-close="true"></a>
     <div class="popup-inner">
-      <div class="popup-title">Email</div>
+      <div class="popup-title">сброс пароля</div>
+      <p class="popup-subtitle">Укажите почту, с которой вы <br>регистрировались на сайте</p>
       <form action="" class="popup-form">
         <div class="popup-form-field">
           <input type="text" name="email" />
           <p>E-mail</p>
         </div>
-        <div class="popup-error">Ошибка</div>
-        <a href="#" class="forgot-password" data-popup="forgot-pass">Войти</a>
-        <button class="sign-in-btn popup-btn btn">Отправить</button>
-        <div class="register-text-btn">
-          Если вы в первый раз на сайте —
-          <a href="#" class="pop-op" data-popup="register">зарегистрируйтесь</a>
-        </div>
+        <button class="sign-in-btn popup-btn btn" data-popup="reset-pass">ОТПРАВИТЬ</button>
       </form>
     </div>
   </div>
 </div>
+
+<div class="popup" data-modal="success" data-close="true">
+  <div class="popup-wrapper">
+    <a href="" class="close-popup" data-close="true"></a>
+    <div class="popup-inner">
+      <div class="popup-title">Регистрация <br>пройдена</div>
+      <p class="popup-subtitle">Пароль для входа на сайт <br>отправлен на e-mail, указанный <br>при регистрации.</p>
+      <form action="" class="popup-form">
+        <button class="register-btn popup-btn btn" data-close="true">ЗАКРЬ<span>l</span>ТЬ</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="popup" data-modal="reset-pass" data-close="true">
+  <div class="popup-wrapper">
+    <a href="" class="close-popup" data-close="true"></a>
+    <div class="popup-inner">
+      <div class="popup-title">восстановить пароль</div>
+      <p class="popup-subtitle">Новый пароль выслан на указанный вами <br>адрес электронной почты</p>
+      <form action="" class="popup-form">
+        <button class="register-btn popup-btn btn" data-popup="auth">ВОЙТИ</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- end auth modals -->
+
 </body>
 </html>
