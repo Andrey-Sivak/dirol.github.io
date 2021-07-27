@@ -3456,26 +3456,26 @@ body {
         right: 0; }
         .product__slider .slick-arrow.slick-next span {
           background-image: url("../img/acc-slider-rt.png");
-          background-position: 10px center;
-          background-size: contain; }
+          background-position: 10px center; }
           @media (max-width: 767px) {
             .product__slider .slick-arrow.slick-next span {
               width: 70%;
               display: block;
               margin: 0 auto;
-              background-position: -1px center; } }
+              background-position: -1px center;
+              background-size: contain; } }
       .product__slider .slick-arrow.slick-prev {
         left: 0; }
         .product__slider .slick-arrow.slick-prev span {
           background-image: url("../img/acc-slider-lt.png");
-          background-position: 16px center;
-          background-size: contain; }
+          background-position: 16px center; }
           @media (max-width: 767px) {
             .product__slider .slick-arrow.slick-prev span {
               width: 70%;
               display: block;
               margin: 0 auto;
-              background-position: 5px center; } }
+              background-position: 5px center;
+              background-size: contain; } }
       .product__slider .slick-arrow:before {
         content: none; }
   .product__slide {

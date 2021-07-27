@@ -59,13 +59,13 @@
         & span {
           background-image: url('../../img/acc-slider-rt.png');
           background-position: 10px center;
-          background-size: contain;
 
           @include response-to(small) {
             width: 70%;
             display: block;
             margin: 0 auto;
             background-position: -1px center;
+            background-size: contain;
           }
         }
       }
@@ -76,13 +76,13 @@
         & span {
           background-image: url('../../img/acc-slider-lt.png');
           background-position: 16px center;
-          background-size: contain;
 
           @include response-to(small) {
             width: 70%;
             display: block;
             margin: 0 auto;
             background-position: 5px center;
+            background-size: contain;
           }
         }
       }
