@@ -30,7 +30,7 @@
     }
 
     @include response-to(small) {
-      padding: 0 39px;
+      padding: 0 15px;
     }
 
     & .slick-arrow {
@@ -44,6 +44,7 @@
       @include response-to(small) {
         width: 39px;
         height: 39px;
+        top: 35%;
       }
 
       & span {
@@ -57,15 +58,15 @@
         right: 0;
 
         & span {
-          background-image: url('../../img/acc-slider-rt.png');
+          background-image: url('../../img/acc-slider-rt.svg');
           background-position: 10px center;
 
           @include response-to(small) {
-            width: 70%;
             display: block;
             margin: 0 auto;
             background-position: -1px center;
             background-size: contain;
+            width: 10px;
           }
         }
       }
@@ -74,15 +75,15 @@
         left: 0;
 
         & span {
-          background-image: url('../../img/acc-slider-lt.png');
+          background-image: url('../../img/acc-slider-lt.svg');
           background-position: 16px center;
 
           @include response-to(small) {
-            width: 70%;
             display: block;
             margin: 0 auto;
-            background-position: 5px center;
+            background-position: -1px center;
             background-size: contain;
+            width: 10px;
           }
         }
       }
@@ -96,12 +97,15 @@
   &__slide {
     text-align: center;
     margin: 0 auto;
-    padding: 0 20px;
 
     &_img {
       width: 260px;
       margin: 0 auto;
       max-width: 90%;
+
+      @include response-to(small) {
+        width: 232px;
+      }
 
       & img {
         max-width: 100%;

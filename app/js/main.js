@@ -57,6 +57,11 @@ window.addEventListener('load', function () {
 
         if (document.querySelector('.header-nav')) {
             window.addEventListener('scroll', scrollHandler);
+
+            if (window.pageYOffset > sticky) {
+                header.classList.add("scroll");
+            }
+
         }
 
         function scrollHandler() {

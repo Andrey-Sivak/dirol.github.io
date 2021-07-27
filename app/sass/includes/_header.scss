@@ -61,17 +61,32 @@
     }
 
     & .dont-drop {
+      text-align: center;
+      padding: 9px 0 5px;
+      border: 1px solid #37E050;
+      filter: drop-shadow(0px 0px 4px #37E050);
+      border-radius: 40px;
       color: $green-color;
-      font-family: Body-Grotesque;
       text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.9);
-      font-weight: 800;
-
       text-transform: uppercase;
 
+      & span {
+        font-weight: 800;
+        width: 163px;
+        display: block;
+        font-size: 14px;
+        font-family: Body-Grotesque;
+
+        @include response-to(small) {
+          width: 274px;
+          font-size: 26px;
+        }
+      }
+
       @include response-to(small) {
-        font-size: 24px;
-        padding-left: 70px;
-        margin-bottom: 14px;
+        margin-bottom: 20px;
+        margin-left: 70px;
+        padding: 12px 0 2px;
       }
 
       @include response-to(medium) {
