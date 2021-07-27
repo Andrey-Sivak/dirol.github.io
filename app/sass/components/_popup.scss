@@ -508,6 +508,13 @@
     }
   }
 
+  &[data-modal="check-denied"] {
+    
+    .popup-title {
+      color: #FF7C7C;
+    }
+  }
+
   &[data-modal="check-denied"],
   &[data-modal="reset-pass"] {
 

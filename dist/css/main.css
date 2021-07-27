@@ -999,7 +999,8 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
     position: relative;
-    width: 100%; }
+    width: 100%;
+    z-index: -1; }
     @media (max-width: 992px) {
       .footer-bottom {
         -webkit-box-pack: justify;
@@ -1827,6 +1828,8 @@ body {
     font-weight: 500;
     width: 100%;
     max-width: unset; }
+  .popup[data-modal="check-denied"] .popup-title {
+    color: #FF7C7C; }
   .popup[data-modal="check-denied"] .popup-subtitle, .popup[data-modal="reset-pass"] .popup-subtitle {
     margin-bottom: 0; }
   .popup-address {
@@ -2327,7 +2330,7 @@ body {
   font-weight: 800;
   color: #fff;
   text-shadow: 0 0 9px rgba(0, 0, 0, 0.25);
-  padding: 10px 0 10px;
+  padding: 10px 0 5px;
   text-align: center;
   border-radius: 20px;
   background-color: #00e245;
@@ -2477,7 +2480,7 @@ body {
   font-size: 16px;
   line-height: calc(19 / 16);
   color: #fff;
-  font-weight: 500; }
+  font-weight: 600; }
 
 .main-prizes-item-text span {
   color: #37e050;
