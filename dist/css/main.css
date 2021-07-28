@@ -1164,8 +1164,6 @@ body {
   z-index: 1000; }
   .header.active {
     background-color: #414650; }
-  .header.scroll {
-    background-color: #414650; }
   @media (max-width: 992px) {
     .header .container {
       padding-left: 0;
