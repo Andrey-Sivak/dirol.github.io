@@ -355,6 +355,31 @@ window.addEventListener('load', function () {
         });
     });
 
+    /*(function feedbackForm() {
+        if (!document.querySelector('.feedback__form')) {
+            return;
+        }
+
+        const form = document.querySelector('.feedback__form');
+        let filledInputs = [];
+        const inputs = [...form.querySelectorAll('.feedback__form_input')];
+
+        inputs.forEach(i => {
+            if (i.value !== '') {
+                filledInputs.push(i);
+            }
+
+            i.addEventListener('input', function (e) {
+                const val = this.value;
+                if (filledInputs.includes(this) && val === '') {
+                    filledInputs = filledInputs.filter(f => f !== this);
+                } else if (!filledInputs.includes(this) && val !== '') {
+                    filledInputs.push(this);
+                }
+            })
+        });
+    })();*/
+
     (function faq() {
         if (!document.querySelector('.feedback__faq_wrap')) {
             return;

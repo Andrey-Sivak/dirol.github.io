@@ -23,6 +23,7 @@
     height: 223px;
     top: -50px;
     left: -33px;
+    z-index: -1;
 
     @include response-to(small) {
       top: -23px;
@@ -204,6 +205,11 @@
           height: auto;
           opacity: 1;
         }
+
+        & .item,
+        & .dot-item {
+          max-height: 1000px;
+        }
       }
     }
 
@@ -275,6 +281,7 @@
         text-indent: 20px;
         display: block;
         margin-bottom: 5px;
+        max-height: 1px;
       }
     }
   }

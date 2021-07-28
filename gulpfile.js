@@ -56,11 +56,11 @@ function scripts() {
 
 function img() {
 	return gulp.src('./app/img/**/**/**/*')
-		.pipe(imagemin([
+		/*.pipe(imagemin([
 	    imagemin.gifsicle({interlaced: true}),
 	    imagemin.mozjpeg({progressive: true}),
 	    imagemin.optipng({optimizationLevel: 5})
-		]))
+		]))*/
 		.pipe(gulp.dest('./dist/img'))
 }
 

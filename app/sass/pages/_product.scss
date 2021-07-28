@@ -59,7 +59,7 @@
 
         & span {
           background-image: url('../../img/acc-slider-rt.svg');
-          background-position: 10px center;
+          background-position: center;
 
           @include response-to(small) {
             display: block;

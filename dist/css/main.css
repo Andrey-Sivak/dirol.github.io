@@ -1235,8 +1235,6 @@ body {
       text-align: center;
       padding: 9px 0 5px;
       border: 1px solid #37E050;
-      -webkit-filter: drop-shadow(0px 0px 4px #37E050);
-              filter: drop-shadow(0px 0px 4px #37E050);
       border-radius: 40px;
       color: #00E245;
       text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.9);
@@ -1399,7 +1397,7 @@ body {
     display: none;
     width: 34px;
     height: 23px;
-    background-image: url("../img/hide-menu.png");
+    background-image: url("../img/hide-menu.svg");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat; }
@@ -1407,7 +1405,7 @@ body {
       .header .mob-menu-btn {
         display: block; } }
     .header .mob-menu-btn.active {
-      background-image: url("../img/show-menu.png"); }
+      background-image: url("../img/show-menu.svg"); }
   .header .main-banner-btn-container {
     position: static;
     -webkit-transform: unset;
@@ -3508,7 +3506,7 @@ body {
         right: 0; }
         .product__slider .slick-arrow.slick-next span {
           background-image: url("../img/acc-slider-rt.svg");
-          background-position: 10px center; }
+          background-position: center; }
           @media (max-width: 767px) {
             .product__slider .slick-arrow.slick-next span {
               display: block;
@@ -3581,7 +3579,8 @@ body {
     width: 231px;
     height: 223px;
     top: -50px;
-    left: -33px; }
+    left: -33px;
+    z-index: -1; }
     @media (max-width: 767px) {
       .feedback .triangle {
         top: -23px; } }
@@ -3751,6 +3750,9 @@ body {
         max-height: 1000px;
         height: auto;
         opacity: 1; }
+      .feedback__faq_item.active .item,
+      .feedback__faq_item.active .dot-item {
+        max-height: 1000px; }
     .feedback__faq_ask {
       font-weight: 900;
       font-size: 16px;
@@ -3808,7 +3810,8 @@ body {
       .feedback__faq_answer .dot-item {
         text-indent: 20px;
         display: block;
-        margin-bottom: 5px; }
+        margin-bottom: 5px;
+        max-height: 1px; }
 
 .privacy {
   padding-top: 96px;
