@@ -23,10 +23,10 @@
   height: 700px;
   background-image: linear-gradient(0deg, #414650 32%, rgba(65, 70, 80, .3) 85.21%);
   box-shadow: 0px -4px 20px rgba(0, 0, 0, 0.25);
-  clip-path: polygon(100% 0, 100% 100%, 0% 100%, 0 40%);
+  clip-path: polygon(100% 0, 100% 100%, 0% 100%, 0 34%);
 
   @media(max-width: 1500px) {
-    clip-path: polygon(100% 0, 100% 100%, 0% 100%, 0 37%);
+    clip-path: polygon(100% 0, 100% 100%, 0% 100%, 0 33%);
   }
 
   @include response-to(small) {
@@ -301,7 +301,7 @@
   background-color: #00e245;
   position: absolute;
   left: -19px;
-  top: calc(50% - (9px / 2));
+  top: calc(36% - (9px / 2));
 }
 
 .main-banner-bottom-item:last-of-type {

@@ -267,6 +267,14 @@
         }
       }
 
+      .prize-img {
+        max-width: 320px;
+
+        & img {
+          width: 100%;
+        }
+      }
+
       & .winners__list_caption {
         color: #00E245;
         text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.9);
