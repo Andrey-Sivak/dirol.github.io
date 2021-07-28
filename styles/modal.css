@@ -88,7 +88,7 @@ form .dropzone .dz-preview .dz-remove {
     border-radius: 50%;
 }
 
-form #submit {
+form button.uf-button-submit {
     display: block;
     margin: 20px auto;
     background: linear-gradient(180deg, #00E245 0%, rgba(0, 226, 69, 0.3) 100%);
@@ -105,8 +105,8 @@ form #submit {
     font-size: 20px;
 }
 
-form #submit:hover,
-form #submit:active,
-form #submit:focus {
+form button.uf-button-submit,
+form button.uf-button-submit,
+form button.uf-button-submit {
     opacity: 1;
 }
