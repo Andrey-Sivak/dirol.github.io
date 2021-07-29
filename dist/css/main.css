@@ -840,6 +840,11 @@ input[type="number"] {
   src: url("../fonts/Body-Grotesque-SlimExtraBold.ttf");
   font-weight: 800; }
 
+@font-face {
+  font-family: BodyGrotesque;
+  src: url("../fonts/BodyGrotesque-SlimExtraBold.otf");
+  font-weight: 800; }
+
 /*
 @font-face {
   font-family: Body-Grotesque;
@@ -870,7 +875,7 @@ body {
       padding-right: 15px; } }
 
 .btn {
-  padding: 11px 0 5px;
+  padding: 10px 0 10px;
   background-image: -webkit-linear-gradient(top, #00E245 0%, rgba(0, 226, 69, 0.3) 100%);
   background-image: linear-gradient(180deg, #00E245 0%, rgba(0, 226, 69, 0.3) 100%);
   background-color: transparent;
@@ -1232,7 +1237,7 @@ body {
           display: flex; } }
     .header-nav .dont-drop {
       text-align: center;
-      padding: 9px 0 5px;
+      padding: 6px 0 7px;
       border: 1px solid #37E050;
       border-radius: 40px;
       color: #00E245;
@@ -1253,7 +1258,7 @@ body {
         .header-nav .dont-drop {
           margin-bottom: 20px;
           margin-left: 70px;
-          padding: 12px 0 2px; } }
+          padding: 6px 0; } }
       @media (max-width: 992px) {
         .header-nav .dont-drop {
           display: block; } }
@@ -1480,7 +1485,7 @@ body {
             justify-content: space-between; }
     @media (max-width: 767px) {
       .popup-form {
-        width: 90%; } }
+        width: 100%; } }
     .popup-form-checkbox {
       position: relative; }
       .popup-form-checkbox-input {
@@ -1720,7 +1725,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     border: none;
-    padding: 10px 20px 5px;
+    padding: 10px 20px 10px;
     border-radius: 20px;
     background: -webkit-linear-gradient(top, #00e245 0%, rgba(0, 226, 69, 0.3) 100%);
     background: linear-gradient(180deg, #00e245 0%, rgba(0, 226, 69, 0.3) 100%);
@@ -2288,7 +2293,7 @@ body {
   background-color: #00e245;
   position: absolute;
   left: -19px;
-  top: calc(36% - (9px / 2)); }
+  top: calc(50% - (9px / 2)); }
 
 @media (max-width: 767px) {
   .main-banner-bottom-item:last-of-type .main-banner-bottom-item-text {
@@ -2363,7 +2368,6 @@ body {
   font-weight: 800;
   color: #fff;
   text-shadow: 0 0 9px rgba(0, 0, 0, 0.25);
-  padding: 11px 0 5px;
   text-align: center;
   border-radius: 20px;
   background-color: #00e245;
@@ -3246,7 +3250,7 @@ body {
       font-size: 30px;
       text-align: center;
       color: #fff;
-      padding: 12px 0 5px;
+      padding: 12px 0;
       cursor: pointer;
       -webkit-transition: all ease-in-out .3s;
       transition: all ease-in-out .3s; }
@@ -3255,7 +3259,7 @@ body {
       @media (max-width: 767px) {
         .winners__tabs_item {
           font-size: 16px;
-          padding: 7px 0 2px;
+          padding: 6px 0 7px;
           width: 40%; } }
       .winners__tabs_item:nth-child(2) {
         margin: 0 -3%; }
@@ -3394,7 +3398,7 @@ body {
     .winners__list.monthly .winners__list_caption {
       color: #00E245;
       text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.9);
-      font-family: Body-Grotesque;
+      font-family: BodyGrotesque;
       font-weight: 800;
       font-size: 30px;
       margin-bottom: 50px;
@@ -3713,6 +3717,9 @@ body {
     .feedback__form textarea {
       resize: none;
       height: 110px; }
+      @media (max-width: 767px) {
+        .feedback__form textarea {
+          border-radius: 20px; } }
   .feedback__caption {
     text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.9);
     color: #00E245;

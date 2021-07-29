@@ -147,6 +147,10 @@
     & textarea {
       resize: none;
       height: 110px;
+
+      @include response-to(small) {
+        border-radius: 20px;
+      }
     }
   }
 

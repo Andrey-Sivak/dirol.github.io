@@ -62,7 +62,7 @@
 
     & .dont-drop {
       text-align: center;
-      padding: 9px 0 5px;
+      padding: 6px 0 7px;
       border: 1px solid #37E050;
       border-radius: 40px;
       color: $green-color;
@@ -86,7 +86,7 @@
       @include response-to(small) {
         margin-bottom: 20px;
         margin-left: 70px;
-        padding: 12px 0 2px;
+        padding: 6px 0;
       }
 
       @include response-to(medium) {
