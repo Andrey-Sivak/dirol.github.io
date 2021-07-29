@@ -3174,14 +3174,13 @@ body {
         margin: 38px auto; } }
     .winners__search_input {
       padding-left: 10px;
-      /*padding-top: 14px;
-      padding-bottom: 14px;*/
+      padding-top: 14px;
+      padding-bottom: 14px;
       width: 190px;
       background-color: transparent;
       letter-spacing: -0.02em;
       color: #fff;
-      font-size: 20px;
-      display: block; }
+      font-size: 20px; }
       .winners__search_input::-webkit-input-placeholder {
         font-size: 14px;
         color: #fff;
