@@ -154,9 +154,10 @@ html body .angular-uf-select-camera {
 }
 
 .uf-controls-wrapper .input-group.date  {
-    display: block;
     height: 45px;
     margin-top: 10px;
+    display: flex;
+    flex-wrap: nowrap;
 }
 
 .uf-controls-wrapper .input-group.date .form-control {
