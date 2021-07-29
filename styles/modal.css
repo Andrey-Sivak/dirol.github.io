@@ -155,13 +155,35 @@ html body .angular-uf-select-camera {
 
 .uf-controls-wrapper .input-group.date  {
     display: block;
+    height: 45px;
+    margin-top: 10px;
+}
+
+.uf-controls-wrapper .input-group.date .form-control {
+    margin-top: 0;
+    border-right: none;
 }
 
 .uf-controls-wrapper .input-group.date .input-group-addon {
-    width: 37px;
-    height: 32px;
-    border-radius: 5px;
-    position: absolute;
-    top: 16px;
-    right: 15px;
+    width: 50px;
+    border-radius: 0 20px 20px 0;
+    background-color: transparent;
+    border: 1px solid #37e050;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.uf-controls-wrapper .input-group.date .input-group-addon .glyphicon {
+    position: static;
+}
+
+.uf-controls-wrapper .input-group.date .input-group-addon .glyphicon-calendar:before {
+    color: #37e050;
+}
+
+.uf-controls-wrapper .input-group.date {
+    color: #000;
 }
