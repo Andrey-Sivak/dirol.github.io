@@ -3173,13 +3173,9 @@ body {
       .winners__search {
         margin: 38px auto; } }
     .winners__search_input {
-      line-height: 1;
-      font-weight: 400;
-      font-family: Inter;
-      vertical-align: baseline;
       padding-left: 10px;
-      padding-top: 14px;
-      padding-bottom: 14px;
+      /*padding-top: 14px;
+      padding-bottom: 14px;*/
       width: 190px;
       background-color: transparent;
       letter-spacing: -0.02em;
