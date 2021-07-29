@@ -3171,7 +3171,8 @@ body {
     padding: 2px 6px 6px; }
     @media (max-width: 767px) {
       .winners__search {
-        margin: 38px auto; } }
+        margin: 38px auto;
+        padding: 2px 6px; } }
     .winners__search_input {
       padding-left: 10px;
       padding-top: 14px;

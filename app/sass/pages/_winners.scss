@@ -23,6 +23,7 @@
 
     @include response-to(small) {
       margin: 38px auto;
+      padding: 2px 6px;
     }
 
     &_input {
