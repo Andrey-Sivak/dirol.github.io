@@ -3180,7 +3180,8 @@ body {
       background-color: transparent;
       letter-spacing: -0.02em;
       color: #fff;
-      font-size: 20px; }
+      font-size: 20px;
+      display: block; }
       .winners__search_input::-webkit-input-placeholder {
         font-size: 14px;
         color: #fff;
