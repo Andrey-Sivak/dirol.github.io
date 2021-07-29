@@ -88,8 +88,8 @@ form .dropzone .dz-preview .dz-remove {
     border-radius: 50%;
 }
 
-form button.uf-button-submit,
-form .angular-uf-button-redirect {
+html body button.uf-button-submit,
+html body .angular-uf-button-redirect {
     display: block;
     margin: 20px auto;
     background: linear-gradient(180deg, #00E245 0%, rgba(0, 226, 69, 0.3) 100%);
@@ -107,13 +107,13 @@ form .angular-uf-button-redirect {
     font-size: 20px;
 }
 
-form button.uf-button-submit,
-form button.uf-button-submit,
-form button.uf-button-submit {
+html body button.uf-button-submit,
+html body button.uf-button-submit,
+html body button.uf-button-submit {
     opacity: 1;
 }
 
-form [_nghost-ced-c32] zxing-scanner[_ngcontent-ced-c32] {
+html body [_nghost-ced-c32] zxing-scanner[_ngcontent-ced-c32] {
     height: 200px;
     overflow: hidden;
     border-radius: 20px;
@@ -121,11 +121,11 @@ form [_nghost-ced-c32] zxing-scanner[_ngcontent-ced-c32] {
     box-shadow: 0px 0px 20px #37E050;
 }
 
-form [_nghost-ced-c32] zxing-scanner[_ngcontent-ced-c32] video {
+html body [_nghost-ced-c32] zxing-scanner[_ngcontent-ced-c32] video {
     height: 250px!important;
 }
 
-form .angular-uf-select-camera {
+html body .angular-uf-select-camera {
     display: block;
     margin: 15px auto 0;
     background-color: #414650;
