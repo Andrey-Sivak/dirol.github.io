@@ -3758,7 +3758,8 @@ body {
       .feedback__faq_item.active .feedback__faq_answer {
         max-height: 1000px;
         height: auto;
-        opacity: 1; }
+        opacity: 1;
+        overflow-y: auto; }
       .feedback__faq_item.active .item,
       .feedback__faq_item.active .dot-item {
         max-height: 1000px; }
@@ -3800,6 +3801,7 @@ body {
         transition: all ease-in-out .3s; }
     .feedback__faq_answer {
       font-weight: 500;
+      overflow-y: hidden;
       max-height: 1px;
       line-height: 120%;
       opacity: 0;

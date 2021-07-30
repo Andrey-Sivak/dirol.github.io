@@ -208,6 +208,7 @@
           max-height: 1000px;
           height: auto;
           opacity: 1;
+          overflow-y: auto;
         }
 
         & .item,
@@ -259,6 +260,7 @@
 
     &_answer {
       font-weight: 500;
+      overflow-y: hidden;
       max-height: 1px;
       line-height: 120%;
       opacity: 0;
