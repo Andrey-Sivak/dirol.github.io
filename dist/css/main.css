@@ -2824,7 +2824,7 @@ body {
   .account__main {
     background-image: url("../img/main-prizes-bg.png");
     background-position: center;
-    background-repeat: no-repeat; }
+    background-repeat: repeat-x; }
     .account__main .container {
       max-width: 970px;
       display: -webkit-box;
