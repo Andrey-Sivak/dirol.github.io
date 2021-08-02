@@ -2008,6 +2008,11 @@ body {
       padding-top: 80px;
       padding-bottom: 0; } }
 
+@media (min-width: 992px) {
+  #presents {
+    margin-top: -80px;
+    padding-top: 80px; } }
+
 @media (max-width: 767px) {
   #presents {
     padding-top: 70px; } }
