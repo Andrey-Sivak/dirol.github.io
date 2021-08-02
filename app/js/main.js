@@ -24,6 +24,46 @@ window.addEventListener('load', function () {
 
     cardValidation();
 
+    (function menu() {
+        if (!document.querySelector('.header-nav')) {
+            return;
+        }
+
+        if (!document.getElementById('presents')) {
+            return;
+        }
+
+        const prizes = document.getElementById('presents');
+        let sticky = prizes.offsetTop - 175;
+
+        const prizesMenuItem = [...document.querySelectorAll('.header-nav-item > a')]
+            .filter(h => h.innerHTML === 'Призы')[0];
+
+        const mainMenuItem = [...document.querySelectorAll('.header-nav-item > a')]
+            .filter(h => h.innerHTML === 'Главная')[0];
+
+        if (window.pageYOffset > sticky) {
+            mainMenuItem.parentElement.classList.remove("active");
+            prizesMenuItem.parentElement.classList.add("active");
+        }
+
+        window.addEventListener('scroll', scrollPrizes);
+        window.addEventListener('scroll', () => {
+            console.log(sticky)
+            console.log(window.pageYOffset)
+        });
+
+        function scrollPrizes() {
+            if (window.pageYOffset > sticky) {
+                mainMenuItem.parentElement.classList.remove("active");
+                prizesMenuItem.parentElement.classList.add("active");
+            } else {
+                prizesMenuItem.parentElement.classList.remove("active");
+                mainMenuItem.parentElement.classList.add("active");
+            }
+        }
+    })();
+
     (function mobMenu() {
         if(!document.querySelector('.header-nav')) {
             return;
