@@ -24,6 +24,32 @@ window.addEventListener('load', function () {
 
     cardValidation();
 
+    (function mobMenu() {
+        if(!document.querySelector('.header-nav')) {
+            return;
+        }
+
+        document.querySelector('.mob-menu-btn')
+            .addEventListener('click', function (e) {
+                e.preventDefault();
+
+                if (!this.classList.contains('active')) {
+                    document.body.style.overflowY = 'hidden';
+                }
+
+                if (this.classList.contains('active')
+                    && document.body.style.overflowY === 'hidden') {
+                    document.body.style.overflowY = 'scroll';
+                }
+
+                this.classList.toggle('active');
+                document.querySelector('.header-nav')
+                    .classList.toggle('active');
+                document.querySelector('.header')
+                    .classList.toggle('active');
+            })
+    })();
+
     (function menu() {
         if (!document.querySelector('.header-nav')) {
             return;
@@ -72,32 +98,6 @@ window.addEventListener('load', function () {
                 mainMenuItem.parentElement.classList.add("active");
             }
         }
-    })();
-
-    (function mobMenu() {
-        if(!document.querySelector('.header-nav')) {
-            return;
-        }
-
-        document.querySelector('.mob-menu-btn')
-            .addEventListener('click', function (e) {
-                e.preventDefault();
-
-                if (!this.classList.contains('active')) {
-                    document.body.style.overflowY = 'hidden';
-                }
-
-                if (this.classList.contains('active')
-                    && document.body.style.overflowY === 'hidden') {
-                    document.body.style.overflowY = 'scroll';
-                }
-
-                this.classList.toggle('active');
-                document.querySelector('.header-nav')
-                    .classList.toggle('active');
-                document.querySelector('.header')
-                    .classList.toggle('active');
-            })
     })();
 
     (function fixHeader() {
