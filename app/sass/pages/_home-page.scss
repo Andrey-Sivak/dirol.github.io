@@ -10,7 +10,14 @@
     flex-direction: column;
     background-image: none;
     padding-top: 80px;
-    padding-bottom: 50px;
+    padding-bottom: 0;
+  }
+}
+
+#presents {
+
+  @include response-to(small) {
+    padding-top: 70px;
   }
 }
 

@@ -34,7 +34,7 @@ window.addEventListener('load', function () {
         }
 
         const prizes = document.getElementById('presents');
-        let sticky = prizes.offsetTop - 175;
+        let sticky = prizes.offsetTop - 275;
 
         const prizesMenuItem = [...document.querySelectorAll('.header-nav-item > a')]
             .filter(h => h.innerHTML === 'Призы')[0];
@@ -42,16 +42,26 @@ window.addEventListener('load', function () {
         const mainMenuItem = [...document.querySelectorAll('.header-nav-item > a')]
             .filter(h => h.innerHTML === 'Главная')[0];
 
+        prizesMenuItem.addEventListener('click', function(e) {
+            if (document.querySelector('.header-nav').classList.contains('active')) {
+
+                document.querySelector('.header-nav').classList.remove('active');
+                document.body.style.overflowY = 'scroll';
+                document.querySelector('.header').classList.remove('active');
+                document.querySelector('.mob-menu-btn').classList.remove('active');
+            }
+
+            if (!this.classList.contains('active')) {
+                this.classList.add('active');
+            }
+        });
+
         if (window.pageYOffset > sticky) {
             mainMenuItem.parentElement.classList.remove("active");
             prizesMenuItem.parentElement.classList.add("active");
         }
 
         window.addEventListener('scroll', scrollPrizes);
-        window.addEventListener('scroll', () => {
-            console.log(sticky)
-            console.log(window.pageYOffset)
-        });
 
         function scrollPrizes() {
             if (window.pageYOffset > sticky) {
